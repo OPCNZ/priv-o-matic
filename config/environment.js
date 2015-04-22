@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'privstat',
+    modulePrefix: 'smallprint',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
