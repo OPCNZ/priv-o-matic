@@ -1,7 +1,20 @@
 # Smallprint
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Smallprint is a interactive Javascript tool for creating the privacy statements required by New Zealand law for small to medium enterprises (SMEs).
+
+The goal is to improve the overall quality of online privacy statements seen in New Zealand, by making it easy for small business owners less familiar with privacy law to create statements.
+
+While this was made for the NZ Privacy Commissioner's website, the intention was that it would be possible for others to improve the tool or reused it elsewhere (possibly in another jurisdictions).
+
+For more info on NZs privacy law requirements see the [Privacy Commissioner's Office website][1].
+
+[1]: https://privacy.org.nz/how-to-comply/your-obligations/
+
+## License
+
+Copyright (c) 2015 Rabid Technologies Ltd.
+
+The intention is to open source this tool, although at this point a license has yet been agreed and it is proprietary software.
 
 ## Prerequisites
 
