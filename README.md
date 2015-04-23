@@ -8,7 +8,7 @@ While this was made for the NZ Privacy Commissioner's website, the intention was
 
 For more info on NZs privacy law requirements see the [Privacy Commissioner's Office website][1].
 
-1: https://privacy.org.nz/how-to-comply/your-obligations/
+[1]: https://privacy.org.nz/how-to-comply/your-obligations/
 
 ## License
 
