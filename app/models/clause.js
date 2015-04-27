@@ -7,7 +7,7 @@ let Clause = DS.Model.extend({
 
 Clause.reopenClass({
   FIXTURES: [
-    {'id': 1, 'content': 'We collect personal information from you, including information about your %black.'},
+    {'id': 1, 'content': 'We collect personal information from you, including information about your %blank.'},
     {'id': 2, 'content': 'We need your location information so that we can serve maps. We need demographic information so we can provide relevant advertising. We need usage information to maintain your preferences.'},
 
   {'id': 3, 'content': '(Alternate: We need that information from you so that we can give you a persistent, personalised service.)'},
