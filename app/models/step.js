@@ -8,11 +8,7 @@ var Step = DS.Model.extend({
 Step.reopenClass({
 	FIXTURES: [
 	{	id: 1, 
-		'content': "My business is called %businessName, and we are\n \
-		located at %location. \n \
-		Our contact email is %email\n \
-		And our phone number is %phone-number\n \
-		"
+		'content': "My business is called %businessName" 
 	},
 	{	id: 2,
 		'content': 'in step two i want to ask, what else do we need to know? How will the weather be tomorrow? %weather'
