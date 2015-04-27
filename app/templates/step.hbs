@@ -1,4 +1,11 @@
 <div class="step">
+	<div class="prompts">
+	{{content}}
+	</div>
+
     {{outlet}}
-    <a class="pure-button pure-button-primary" href="#">Move along...</a>
+    
+    <button {{action "nextStep"}} class="pure-button pure-button-primary">move along</button>
+
+    <div id="progress-bar"></div>
 </div>
