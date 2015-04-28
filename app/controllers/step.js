@@ -4,7 +4,9 @@ export default Ember.Controller.extend({
 	actions: {
 		nextStep: function () {
 			console.log("Next step");
-			alert("next step");
 		}
-	}
+	},
+	prompts: function () {
+		this.model.get('prompts');
+	}.property('@each.prompts'),
 });

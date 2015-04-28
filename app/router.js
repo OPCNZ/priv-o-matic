@@ -6,13 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
-
-  	this.route('index', { path: '/' });
-
-	this.resource('step', {path: 'step/:step'}, function () {
-  		this.route('progress');  	
-	});
-
-  	this.route('whatsThis', {path: 'whatsThis'});
-  
+  this.resource('step', {path: 'step/:step'}, function () {
+    this.route('progress');    
+  });
+  this.route('whatsThis', {path: 'whatsThis'});
 });
