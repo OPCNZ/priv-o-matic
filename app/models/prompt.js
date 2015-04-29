@@ -13,7 +13,7 @@ let data = [
 	{step: 2, prompts: ['How will the weather be tomorrow? %weather'] },
 	{step: 3, prompts: ['Do you use google adsense? %goodle-adsense', 'Do you use Amazon Web Services? %amazon'] },
 	{step: 4, prompts: ['Where do you store the data collected? %data-collected']}
-]
+	];
 
 //Turn the data above into the format that ember fixtures wants
 var fixtures = [];
