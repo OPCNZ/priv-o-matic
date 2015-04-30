@@ -7,8 +7,6 @@ export default Ember.Controller.extend({
       let next_step = parseInt(this.model.id) + 1;
       this.transitionToRoute('steps.step', next_step);
     }
-  },
-  prompts: function () {
-    this.model.get('prompts');
-  }.property('@each.prompts'),
+  }
+
 });
