@@ -3,7 +3,7 @@ import DS from 'ember-data';
 var Step = DS.Model.extend({
   content: DS.attr('string'),
   prompts: DS.hasMany('prompt', {async: true}),
-  isCompleted: DS.attr('boolean')
+  isCompleted: DS.attr('boolean'),
 });
 
 
@@ -11,16 +11,19 @@ Step.reopenClass({
   FIXTURES: [
   {  id: 1, 
     content: 'welcome to step one',
-    isCompleted: false
+    isCompleted: false,
+    prompts: [1,]
   },
   {  id: 2,
     content: 'in step two i want to ask, what else do we need to know? ',
-    isCompleted: false
+    isCompleted: false,
+    prompts: [2,]
   },
   {
     id: 3,
     content: 'What demographic info do you collect?',
-    isCompleted: false
+    isCompleted: false,
+    prompts: [3,4]
   },
   {
     id: 4,
