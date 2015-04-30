@@ -6,9 +6,8 @@
 
   <div class="prompts">
     <ul>
-      {{#each prompt in model.prompts}}
-        <li>{{prompt.question}}</li>
-        {{outlet}}
+      {{#each prompt in model.prompts itemController=steps.prompts}}
+          {{partial "prompt"}}
       {{/each}}
     </ul>
   </div>
