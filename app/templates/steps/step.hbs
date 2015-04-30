@@ -1,0 +1,28 @@
+<div class="step">
+
+  <div class="step-content">
+    {{model.content}}
+  </div>
+
+  <div class="prompts">
+    <ul>
+      {{#each prompt in model.prompts}}
+        <li>{{prompt.question}}</li>
+        {{outlet}}
+      {{/each}}
+    </ul>
+  </div>
+
+  {{outlet}}
+
+  <button {{action "nextStep"}} class="pure-button pure-button-primary">move along</button>
+
+  <div class="progressbar">
+    {{#each step in steps itemController="steps"}}
+      <li {{bind-attr class="step.isCompleted:completed"}}>
+        {{input type="checkbox" checked=todo.isCompleted class="toggle"}}
+      <label>{{step.id}}</label>
+      </li>
+    {{/each}}
+  </div>    
+</div>
