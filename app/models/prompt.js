@@ -5,7 +5,9 @@ let Prompt = DS.Model.extend({
 
   question: DS.attr('string'), //our prompt
   answer: DS.attr('string'), // their answer
-  clause: DS.attr('string')
+  clause: DS.attr('string'),
+  isAnswered: DS.attr('boolean'),
+
 });
 
 let data = [
@@ -27,8 +29,6 @@ for (let step of data) {
     fixtures.push({id: id_number, question: question, step: step_number});
   }
 }
-
-console.log(fixtures);
 
 Prompt.reopenClass({
   FIXTURES: fixtures

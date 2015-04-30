@@ -6,9 +6,8 @@
 
   <div class="prompts">
     <ul>
-      {{#each prompt in model.prompts}}
-        <li>{{prompt.question}}</li>
-        {{outlet}}
+      {{#each prompt in model.prompts itemController=steps.prompts}}
+          {{partial "prompt"}}
       {{/each}}
     </ul>
   </div>
@@ -17,12 +16,4 @@
 
   <button {{action "nextStep"}} class="pure-button pure-button-primary">move along</button>
 
-  <div class="progressbar">
-    {{#each step in steps itemController="steps"}}
-      <li {{bind-attr class="step.isCompleted:completed"}}>
-        {{input type="checkbox" checked=todo.isCompleted class="toggle"}}
-      <label>{{step.id}}</label>
-      </li>
-    {{/each}}
-  </div>    
 </div>
