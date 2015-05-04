@@ -1,19 +1,14 @@
-<div class="step">
+<div class=pure-g">
 
-  <div class="step-content">
-    {{model.content}}
+  <div class="step-main" class="pure-u-1-2">
+    <h2>{{model.title}}:</h2>
+
+    {{component model.name model=model}}
+
+    <button {{action "nextStep"}} class="pure-button pure-button-primary">move along</button>
   </div>
 
-  <div class="prompts">
-    <ul>
-      {{#each prompt in model.prompts itemController=steps.prompts}}
-          {{partial "prompt"}}
-      {{/each}}
-    </ul>
+  <div class="step-aside" class="pure-u-1-6">
+    {{component "step-data-types-aside"}}
   </div>
-
-  {{outlet}}
-
-  <button {{action "nextStep"}} class="pure-button pure-button-primary">move along</button>
-
 </div>
