@@ -1,40 +1,33 @@
 import DS from 'ember-data';
 
 var Step = DS.Model.extend({
-  content: DS.attr('string'),
-  prompts: DS.hasMany('prompt', {async: true}),
+  title: DS.attr('string'),
+  name: DS.attr('string'), //how we find our component
   isCompleted: DS.attr('boolean'),
+  asideComponentName: function() {
+    return this.get('name') + '-aside';
+  }
 });
 
 
 Step.reopenClass({
   FIXTURES: [
   {  id: 1, 
-    content: 'welcome to step one',
-    isCompleted: false,
-    prompts: [1,]
+    title: 'We collect the following types of data about our users',
+    name: 'step-data-types',
+    isCompleted: false
   },
   {  id: 2,
-    content: 'in step two i want to ask, what else do we need to know? ',
+    title: 'We get this data from',
+    name: 'step-data-sources',
     isCompleted: false,
-    prompts: [2,]
   },
   {
     id: 3,
-    content: 'What demographic info do you collect?',
+    title: 'Why do you need that information?',
+    name: 'step-why',
     isCompleted: false,
-    prompts: [3,4]
   },
-  {
-    id: 4,
-    content: 'Do you use google adsense? Amazon adwords? other?',
-    isCompleted: false
-  },
-  {
-    id: 5,
-    content: 'Storage',
-    isCompleted: false
-  }
   ]
 });
 
