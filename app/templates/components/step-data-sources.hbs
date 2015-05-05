@@ -1,27 +1,22 @@
 {{yield}}
 
-If there's a reasonable chance information can be used to identify a living person, it's considered "Personal Information" by New Zealand law (even if no names appear). The information doesn't need to be “secret” or “sensitive” – it just needs to be about them.
 
-Examples of personal information include
 
-Identity information:
-
-Name, username, email-address,  password, date-of-birth/Age, gender, etc
-
-Location information:
-
-GPS Location, physical addresses, etc
-
-Behavioural information:
-
-Interests, browsing habits, searches, contacts or associates, etc
-
-Computer/Network information:
-
-Browser identifiers/fingerprint, IP address, network information, etc
-
-Financial information:
-
-Credit card, purchase history, etc
-
-… many any other things. The types of information that can identify someone can be very broad.
+<ol>
+<li>
+  {{input type="checkbox" name="userData" checked=userData}} 
+  Our users themselves
+</li>
+<li>
+  {{input type="checkbox" name="publicData" checked=publicData}} 
+  Public sources of information on our users
+</li>
+<li>
+  {{input type="checkbox" name="thirdPartyData" checked=thirdPartyData}} 
+  3rd parties (a credit agency for instance)
+</li>
+<li>
+  {{input type="checkbox" name="otherData" checked=otherData}} 
+  Other
+</li>
+</ol>
