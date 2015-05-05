@@ -13,7 +13,7 @@ var Step = DS.Model.extend({
 Step.reopenClass({
   FIXTURES: [
   {  id: 1, 
-    title: 'We collect the following types of data about our users',
+    title: 'We collect the following types of data about our users:',
     name: 'step-data-types',
     isCompleted: false
   },
