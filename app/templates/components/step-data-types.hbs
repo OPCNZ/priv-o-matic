@@ -1,32 +1,36 @@
-{{yield}}
 
 <ul>
-<li>
-  {{input type="checkbox" name="identityDataSource" checked=identityDataSource}} 
-  Identity (email/etc) 
-</li>
-<li>
-  {{input type="checkbox" name="locationDataSource" checked=locationDataSource}} 
-  Location
-</li>
-<li>
-  {{input type="checkbox" name="userBehaviourDataSource" checked=userBehaviourDataSource}} 
-  User Behaviour
-</li>
-<li>
-  {{input type="checkbox" name="computerNetworkDataSource" checked=computerNetworkDataSource}} 
-  Computer/Network
-</li>
-<li>
-  {{input type="checkbox" name="financialDataSource" checked=financialDataSource}} 
-  Financial
-</li>
-<li>
-  {{input type="checkbox" name="otherDataSource" checked=otherDataSource}} 
-  other [free text]
-  {{textarea value=name cols="80" rows="6"}}
-</li>
-<li>
-We don’t collect any user data
-</li>
+  <li>
+    {{input type="checkbox" name="identityData" checked=model.identityData}} 
+    Identity (email/etc) 
+  </li>
+  <li>
+    {{input type="checkbox" name="locationData" checked=model.locationData}} 
+    Location
+  </li>
+  <li>
+    {{input type="checkbox" name="userBehaviourData" checked=model.userBehaviourData}} 
+    User Behaviour
+  </li>
+  <li>
+    {{input type="checkbox" name="computerNetworkData" checked=model.computerNetworkData}} 
+    Computer/Network
+  </li>
+  <li>
+    {{input type="checkbox" name="financialData" checked=model.financialData}} 
+    Financial
+  </li>
+  <li>
+    {{input type="checkbox" name="otherData" checked=otherData action="toggleOther"}} 
+    Other
+    {{#if isShowingOther}}
+      {{textarea value=name cols="80" rows="6"}}
+    {{/if}}
+  </li>
+  <li>
+    {{input type="checkbox" name="noData" checked=model.noData }} 
+    We don’t collect any user data
+  </li>
 </ul>
+
+{{yield}}
