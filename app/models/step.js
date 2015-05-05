@@ -3,17 +3,15 @@ import DS from 'ember-data';
 var Step = DS.Model.extend({
   title: DS.attr('string'),
   name: DS.attr('string'), //how we find our component
-  isCompleted: DS.attr('boolean'),
-  asideComponentName: function() {
-    return this.get('name') + '-aside';
-  }
+  isCompleted: DS.attr('boolean', {defaultValue: false}),
+  responses: DS.hasMany('response')
 });
 
 
 Step.reopenClass({
   FIXTURES: [
   {  id: 1, 
-    title: 'We collect the following types of data about our users',
+    title: 'We collect the following types of data about our users:',
     name: 'step-data-types',
     isCompleted: false
   },
