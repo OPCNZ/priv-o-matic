@@ -3,10 +3,8 @@ import DS from 'ember-data';
 var Step = DS.Model.extend({
   title: DS.attr('string'),
   name: DS.attr('string'), //how we find our component
-  isCompleted: DS.attr('boolean'),
-  asideComponentName: function() {
-    return this.get('name') + '-aside';
-  }
+  isCompleted: DS.attr('boolean', {defaultValue: false}),
+  responses: DS.hasMany('response')
 });
 
 
