@@ -68,6 +68,12 @@ Step.reopenClass({
     name: "step-statement-2",
     isCompleted: false,
   },
+  {
+    id: 11,
+    title: 'Retention',
+    name: "step-retention",
+    isCompleted: false,
+  },
   ]
 });
 
