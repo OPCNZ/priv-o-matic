@@ -44,6 +44,12 @@ Step.reopenClass({
     name: "step-optional-info",
     isCompleted: false,
   },
+  {
+    id: 7,
+    title: 'Applicable Laws',
+    name: "step-legal-requirement",
+    isCompleted: false,
+  },
   ]
 });
 
