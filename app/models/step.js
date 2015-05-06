@@ -50,6 +50,12 @@ Step.reopenClass({
     name: "step-legal-requirement",
     isCompleted: false,
   },
+  {
+    id: 8,
+    title: 'Privacy Statement',
+    name: "step-statement",
+    isCompleted: false,
+  },
   ]
 });
 
