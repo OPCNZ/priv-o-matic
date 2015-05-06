@@ -6,7 +6,13 @@ export default Ember.Controller.extend({
             this.model.save();
 
             let next_step = parseInt(this.model.id) + 1;
-            this.transitionToRoute('steps.step', next_step);        
+
+            if (next_step < 4) { //TODO work out how many steps there are
+                this.transitionToRoute('steps.step', next_step);          
+            }
+            else {
+                this.transitionToRoute('steps.finish');
+            }
         }    
     }
 
