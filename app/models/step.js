@@ -32,6 +32,12 @@ Step.reopenClass({
     name: 'step-sharing',
     isCompleted: false,
   },
+  {
+    id: 5,
+    title: 'Contact',
+    name: "step-contact",
+    isCompleted: false,
+  },
   ]
 });
 
