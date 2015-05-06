@@ -26,6 +26,12 @@ Step.reopenClass({
     name: 'step-why',
     isCompleted: false,
   },
+  {
+    id: 4,
+    title: 'Who do you share with and why?',
+    name: 'step-sharing',
+    isCompleted: false,
+  },
   ]
 });
 
