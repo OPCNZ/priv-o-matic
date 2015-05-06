@@ -38,6 +38,12 @@ Step.reopenClass({
     name: "step-contact",
     isCompleted: false,
   },
+  {
+    id: 6,
+    title: 'Optional Information',
+    name: "step-optional-info",
+    isCompleted: false,
+  },
   ]
 });
 
