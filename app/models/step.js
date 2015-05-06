@@ -53,7 +53,7 @@ Step.reopenClass({
   {
     id: 8,
     title: 'Privacy Statement',
-    name: "step-statement",
+    name: "step-statement-1",
     isCompleted: false,
   },
   {
