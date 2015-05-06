@@ -26,6 +26,42 @@ Step.reopenClass({
     name: 'step-why',
     isCompleted: false,
   },
+  {
+    id: 4,
+    title: 'Who do you share with and why?',
+    name: 'step-sharing',
+    isCompleted: false,
+  },
+  {
+    id: 5,
+    title: 'Contact',
+    name: "step-contact",
+    isCompleted: false,
+  },
+  {
+    id: 6,
+    title: 'Optional Information',
+    name: "step-optional-info",
+    isCompleted: false,
+  },
+  {
+    id: 7,
+    title: 'Applicable Laws',
+    name: "step-legal-requirement",
+    isCompleted: false,
+  },
+  {
+    id: 8,
+    title: 'Privacy Statement',
+    name: "step-statement",
+    isCompleted: false,
+  },
+  {
+    id: 9,
+    title: 'Security',
+    name: "step-security",
+    isCompleted: false,
+  },
   ]
 });
 

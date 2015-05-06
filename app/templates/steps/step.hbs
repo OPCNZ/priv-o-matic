@@ -1,14 +1,6 @@
-<div class=pure-g">
 
-  <div class="step-main" class="pure-u-1-2">
-    <h2>{{model.title}}</h2>
+<h2>{{model.title}}</h2>
 
-    {{component model.name model=model}}
+{{component model.name model=model}}
 
-    <button {{action "nextStep"}} class="pure-button pure-button-primary">move along</button>
-  </div>
-
-  <div class="step-aside" class="pure-u-1-6">
-    {{component "step-aside"}}
-  </div>
-</div>
+<button {{action "nextStep"}} class="pure-button pure-button-primary">move along</button>
