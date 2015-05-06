@@ -56,6 +56,12 @@ Step.reopenClass({
     name: "step-statement",
     isCompleted: false,
   },
+  {
+    id: 9,
+    title: 'Security',
+    name: "step-security",
+    isCompleted: false,
+  },
   ]
 });
 
