@@ -2,21 +2,21 @@
 
 
 
-<ol>
+<ul>
 <li>
-  {{input type="checkbox" name="userData" checked=userData}} 
+  {{input type="checkbox" name="userDataSource" checked=model.userData}} 
   Our users themselves
 </li>
 <li>
-  {{input type="checkbox" name="publicData" checked=publicData}} 
+  {{input type="checkbox" name="publicDataSource" checked=model.publicData}} 
   Public sources of information on our users
 </li>
 <li>
-  {{input type="checkbox" name="thirdPartyData" checked=thirdPartyData}} 
+  {{input type="checkbox" name="thirdPartyDataSource" checked=model.thirdPartyData}} 
   3rd parties (a credit agency for instance)
 </li>
 <li>
-  {{input type="checkbox" name="otherData" checked=otherData}} 
+  {{input type="checkbox" name="otherDataSource" checked=model.otherData}} 
   Other
 </li>
-</ol>
+</ul>
