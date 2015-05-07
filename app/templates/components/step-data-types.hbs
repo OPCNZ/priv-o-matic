@@ -1,36 +1,89 @@
 
-<ul>
-  <li>
-    {{input type="checkbox" name="identityData" checked=model.identityData}} 
-    Identity (email/etc) 
-  </li>
-  <li>
-    {{input type="checkbox" name="locationData" checked=model.locationData}} 
-    Location
-  </li>
-  <li>
-    {{input type="checkbox" name="userBehaviourData" checked=model.userBehaviourData}} 
-    User Behaviour
-  </li>
-  <li>
-    {{input type="checkbox" name="computerNetworkData" checked=model.computerNetworkData}} 
-    Computer/Network
-  </li>
-  <li>
-    {{input type="checkbox" name="financialData" checked=model.financialData}} 
-    Financial
-  </li>
-  <li>
-    {{input type="checkbox" name="otherData" checked=model.otherData}} 
-    Other
-    {{#if isShowingOther}}
-      {{textarea value=name cols="80" rows="6"}}
-    {{/if}}
-  </li>
-  <li>
-    {{input type="checkbox" name="noData" checked=model.noData }} 
-    We don’t collect any user data
-  </li>
-</ul>
+<div class="pure-g">
+  <div class="pure-u-2-3">
+    <ul>
+      <li>
+        {{input type="checkbox" name="identityData" checked=model.identityData}} 
+        Identity (email/etc) 
+      </li>
+      <li>
+        {{input type="checkbox" name="locationData" checked=model.locationData}} 
+        Location
+      </li>
+      <li>
+        {{input type="checkbox" name="userBehaviourData" checked=model.userBehaviourData}} 
+        User Behaviour
+      </li>
+      <li>
+        {{input type="checkbox" name="computerNetworkData" checked=model.computerNetworkData}} 
+        Computer/Network
+      </li>
+      <li>
+        {{input type="checkbox" name="financialData" checked=model.financialData}} 
+        Financial
+      </li>
+      <li>
+        {{input type="checkbox" name="otherData" checked=model.otherData}} 
+        Other
+        {{#if isShowingOther}}
+          {{textarea value=name cols="80" rows="6"}}
+        {{/if}}
+      </li>
+    </ul>
 
-{{yield}}
+    <ul>
+      <li>
+        {{input type="checkbox" name="noData" checked=model.noData }} 
+        We don’t collect any user data
+      </li>
+    </ul>
+
+    <div>
+      <p>You don’t need a privacy statement then. No point in filling this out any further.</p>
+    </div>
+
+    {{yield}}
+  </div>
+
+  <div class="pure-u-1-3">
+    <button type="button">What should I list?</button>
+
+    <div>
+      <p>
+        If there's a reasonable chance information can be used to identify a living person, it's considered &ldquo;Personal Information&rdquo; by New Zealand law (even if no names appear). The information doesn't need to be &ldquo;secret&rdquo; or &ldquo;sensitive&ldquo;—it just needs to be about them.
+      </p>
+
+      <p>Examples of personal information include</p>
+
+      <ul>
+        <li> 
+          Identity information: <br />
+          Name, username, email-address,  password, date-of-birth/Age, gender, etc
+        </li>
+        <li>
+          Location information: <br />
+          GPS Location, physical addresses, etc
+        </li>
+        <li>
+          Behavioural information: <br />
+          Interests, browsing habits, searches, contacts or associates, etc
+        </li>
+        <li>
+          Computer/Network information: <br />
+          Browser identifiers/fingerprint, IP address, network information, etc
+        </li>
+        <li>
+          Financial information: <br />
+          Credit card, purchase history, etc
+        </li>
+      </ul>
+
+      <p>
+        &hellip; many other things. The types of information that can identify someone can be very broad.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
