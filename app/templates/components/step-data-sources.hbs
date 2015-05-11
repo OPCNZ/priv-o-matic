@@ -1,22 +1,25 @@
 {{yield}}
 
 
+<ul>
+    <li>
+      {{input type="checkbox" name="userDataSource" checked=model.statement.userDataSource}} 
+      Our users themselves
+    </li>
+    <li>
+      {{input type="checkbox" name="publicDataSource" checked=model.statement.publicDataSource}} 
+      Public sources of information on our users
+    </li>
+    <li>
+      {{input type="checkbox" name="thirdPartyDataSource" checked=model.statement.thirdPartyDataSource}} 
+      3rd parties (a credit agency for instance)
+    </li>
+    <li>
+      {{input type="checkbox" name="model.statement.otherDataSource" checked=isShowingOther}} 
+      Other
+        {{#if isShowingOther}}
+          {{textarea value=model.statement.otherDataSourceInfo cols="80" rows="6"}}
+        {{/if}}
 
-<ol>
-<li>
-  {{input type="checkbox" name="userData" checked=userData}} 
-  Our users themselves
-</li>
-<li>
-  {{input type="checkbox" name="publicData" checked=publicData}} 
-  Public sources of information on our users
-</li>
-<li>
-  {{input type="checkbox" name="thirdPartyData" checked=thirdPartyData}} 
-  3rd parties (a credit agency for instance)
-</li>
-<li>
-  {{input type="checkbox" name="otherData" checked=otherData}} 
-  Other
-</li>
-</ol>
+    </li>
+</ul>
