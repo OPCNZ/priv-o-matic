@@ -6,8 +6,16 @@ specific font stacks to ensure the greatest OS/browser compatibility.
 */
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
-    /* Set your content font stack here: */
-    font-family: 'Lato', sans-serif;
+  /* Set your content font stack here: */
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  color: rgb(110, 110, 110);
+  line-height: 1.4em;
+}
+
+.pure-g .help-text {
+  font-size: 15px;
 }
 
 /*font-family: 'Bitter', serif;*/
