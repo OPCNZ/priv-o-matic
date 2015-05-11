@@ -5,11 +5,11 @@
 
     <p>
       Users can contact us to view or correct information I have about them at
-      {{input type="text" value="this email address"}}
+      {{input type="text" value=model.statement.emailAddress placeholder="this email address"}}
       (or
-      {{input type="text" value="phone number"}},
+      {{input type="text" value=model.statement.phoneNumber placeholder="phone number"}},
       or
-      {{input type="text" value="postal address"}}
+      {{textarea type="text" value=model.statement.postalAddress placeholder="postal address"}}
       ).
     </p>
   </div>
