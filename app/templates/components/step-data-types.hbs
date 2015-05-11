@@ -1,34 +1,34 @@
 
 <ul>
   <li>
-    {{input type="checkbox" name="identityData" checked=model.identityData}} 
+    {{input type="checkbox" name="identityData" checked=model.statement.identityData}} 
     Identity (email/etc) 
   </li>
   <li>
-    {{input type="checkbox" name="locationData" checked=model.locationData}} 
+    {{input type="checkbox" name="locationData" checked=model.statement.locationData}} 
     Location
   </li>
   <li>
-    {{input type="checkbox" name="userBehaviourData" checked=model.userBehaviourData}} 
+    {{input type="checkbox" name="userBehaviourData" checked=model.statement.userBehaviourData}} 
     User Behaviour
   </li>
   <li>
-    {{input type="checkbox" name="computerNetworkData" checked=model.computerNetworkData}} 
+    {{input type="checkbox" name="computerNetworkData" checked=model.statement.computerNetworkData}} 
     Computer/Network
   </li>
   <li>
-    {{input type="checkbox" name="financialData" checked=model.financialData}} 
+    {{input type="checkbox" name="financialData" checked=model.statement.financialData}} 
     Financial
   </li>
   <li>
-    {{input type="checkbox" name="otherData" checked=isShowingOther}} 
+    {{input type="checkbox" name="model.statement.otherData" checked=isShowingOther}} 
     Other
     {{#if isShowingOther}}
-      {{textarea value=name cols="80" rows="6"}}
+      {{textarea value=model.statement.otherDataInfo cols="80" rows="6"}}
     {{/if}}
   </li>
   <li>
-    {{input type="checkbox" name="noData" checked=model.noData }} 
+    {{input type="checkbox" name="noData" checked=model.statement.noData }} 
     We don’t collect any user data
   </li>
 </ul>
