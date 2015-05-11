@@ -21,7 +21,7 @@
     Financial
   </li>
   <li>
-    {{input type="checkbox" name="otherData" checked=model.otherData}} 
+    {{input type="checkbox" name="otherData" checked=isShowingOther}} 
     Other
     {{#if isShowingOther}}
       {{textarea value=name cols="80" rows="6"}}
