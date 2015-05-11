@@ -19,3 +19,57 @@ html, button, input, select, textarea,
 }
 
 /*font-family: 'Bitter', serif;*/
+
+.p2 {
+  margin-top: 36px;
+}
+
+.b1 {
+    margin-top: 48px;
+}
+
+.b2 {
+  margin-top: 60px;
+}
+
+.logo-image {
+  margin-top: 60px;
+}
+
+.get-started-button {
+  width: 10.5em;
+  font-weight:  400;
+}
+
+.whats-this-button {
+  width: 15em;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/*----*/
+
+.center-children {
+  text-align: center;
+}
+
+.centered-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-blue {
+  color: white;
+  background-color: rgb(86,178,203);
+}
+
+.button-red-text {
+  color: rgb(225, 95,85);
+  border: 1px solid red;
+  background-color: white;
+}
+
+.button-xlarge {
+  font-size: 125%;
+}
