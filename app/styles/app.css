@@ -62,6 +62,13 @@ h2 {
   font-weight: 400;
 }
 
+.next-step-button {
+  width: 11em;
+  font-weight: 400;
+  margin: 0 auto;
+  display: block;
+}
+
 .help-text-button {
   width: 100%;
   font-size: 14px;
