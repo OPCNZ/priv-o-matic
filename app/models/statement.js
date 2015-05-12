@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 let Statement = DS.Model.extend({
-    steps: DS.hasMany('step', {async: true}), 
+    steps: DS.hasMany('step', {async: true}),
 
 
     //Data types
@@ -19,11 +19,11 @@ let Statement = DS.Model.extend({
     publicDataSource: DS.attr('boolean'),
     thirdPartyDataSource: DS.attr('boolean'),
     otherDataSource: DS.attr('boolean'),
-    otherDataSourceInfo: DS.attr(),  
+    otherDataSourceInfo: DS.attr(),
 
 
     //why
-    reasons: DS.attr(),
+    extraReasons: DS.attr(),
 
     //Sharing
     sharingParties: DS.attr(),
