@@ -14,11 +14,21 @@ html, button, input, select, textarea,
   line-height: 1.4em;
 }
 
+h2 {
+  font-family: 'Bitter', serif;
+  text-align: center;
+  font-size: 1.9em;
+  font-weight: 400;
+  color: rgb(0, 65, 80);
+}
+
+.step-heading {
+  margin-top: 60px;
+}
+
 .pure-g .help-text {
   font-size: 15px;
 }
-
-/*font-family: 'Bitter', serif;*/
 
 .p2 {
   margin-top: 36px;
