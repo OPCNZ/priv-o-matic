@@ -1,33 +1,33 @@
 
 <div class="pure-g">
   <div class="pure-u-2-3">
-  
+
     <p>Who do you share with and why?</p>
 
     <p>
-      Besides our staff, we share this info with 
+      Besides our staff, we share this info with
       {{input type="text" value=model.statement.thirdPartySharing placeholder="3rd party"}},
-      and 
+      and
       {{input type="text" value=model.statement.thirdPartySharingMore placeholder="3rd party"}}
-      in order to 
+      in order to
       {{input type="text" value=model.statement.thirdPartySharingWhy placeholder="take action connected to the purpose for collection"}}.
     </p>
 
-    {{#each party in model.statement.sharingParties}}
+    {{#each model.statement.sharingParties as |party|}}
       <div>
         <p>
-          We also share this info with 
+          We also share this info with
           {{input type="text" placeholder="3rd party"}},
-          and 
+          and
           {{input type="text" placeholder="3rd party"}}
-          in order to 
+          in order to
           {{input type="text" placeholder="take action connected to the purpose for collection"}}.
         </p>
       </div>
     {{/each}}
 
-    <p>  
-      <button {{action "addParty"}} class="pure-button pure-button-secondary">we have another reason</button>  
+    <p>
+      <button {{action "addParty"}} class="pure-button pure-button-secondary">we have another reason</button>
     </p>
 
   </div>
@@ -41,8 +41,8 @@
       </p>
 
       <p>
-        See <a href="https://privacy.org.nz/limits-on-use-of-personal-information-principle-ten/">Privacy Principle 10</a>, 
-        and <a href="https://privacy.org.nz/limits-on-disclosure-of-personal-information-principle-eleven/#collection">Privacy Principle 11</a> 
+        See <a href="https://privacy.org.nz/limits-on-use-of-personal-information-principle-ten/">Privacy Principle 10</a>,
+        and <a href="https://privacy.org.nz/limits-on-disclosure-of-personal-information-principle-eleven/#collection">Privacy Principle 11</a>
         for more.
       </p>
 
