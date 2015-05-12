@@ -1,13 +1,19 @@
 {{yield}}
 <p>
-  We collect this data because we need to {{input value="do something that directly relates to our business"}}
+  We collect this data because we need to {{input value=model.statement.collectionReason placeholder="do something that directly relates to our business"}}
 </p>
+
+{{#each model.statement.extraReasons as |reason|}}
+  <p>
+    also, we need to {{input value=model.statement.extraReason placeholder="do another thing related to our business"}}
+  </p>
+{{/each}}
+
 
 <p>
-<button {{action "moreReasons"}} class="pure-button pure-button-secondary">we have another reason</button>
-
-  also, we need {{input value="do another thing related to our business"}}
+  <button {{action "addReason"}} class="pure-button pure-button-secondary">we have another reason</button>
 </p>
+
 
 <p>
   We only collect information relates to these purposes:
