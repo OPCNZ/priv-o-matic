@@ -22,6 +22,11 @@ h2 {
   color: rgb(0, 65, 80);
 }
 
+.container {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
 .step-heading {
   margin-top: 60px;
 }
@@ -76,7 +81,7 @@ h2 {
 
 .button-red-text {
   color: rgb(225, 95,85);
-  border: 1px solid red;
+  border: 1px solid rgb(225, 95,85);
   background-color: white;
 }
 
