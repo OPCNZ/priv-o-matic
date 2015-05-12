@@ -20,6 +20,15 @@ let Statement = DS.Model.extend({
     thirdPartyDataSource: DS.attr('boolean'),
     otherDataSource: DS.attr('boolean'),
     otherDataSourceInfo: DS.attr(),  
+
+
+    //why
+    reasons: DS.attr(),
+
+    //Sharing
+    sharingParties: DS.attr(),
+
+
 });
 
 Statement.reopenClass({
