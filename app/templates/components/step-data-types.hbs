@@ -2,37 +2,37 @@
   <div class="pure-u-3-4">
     <p>We collect the following types of data about our users:</p>
 
-    <ul>
-      <li>
-        {{input type="checkbox" name="identityData" checked=model.identityData}} 
-        Identity (email/etc) 
-      </li>
-      <li>
-        {{input type="checkbox" name="locationData" checked=model.locationData}} 
-        Location
-      </li>
-      <li>
-        {{input type="checkbox" name="userBehaviourData" checked=model.userBehaviourData}} 
-        User Behaviour
-      </li>
-      <li>
-        {{input type="checkbox" name="computerNetworkData" checked=model.computerNetworkData}} 
-        Computer/Network
-      </li>
-      <li>
-        {{input type="checkbox" name="financialData" checked=model.financialData}} 
-        Financial
-      </li>
-      <li>
-        {{input type="checkbox" name="otherData" checked=model.otherData}} 
-        Other
-        {{#if isShowingOther}}
-          {{textarea value=name cols="80" rows="6"}}
-        {{/if}}
-      </li>
+    <ul class="pure-g non-bullet-list">
+        <li class="pure-u-1-2">
+          {{input type="checkbox" name="identityData" checked=model.identityData}}
+          Identity (email/etc)
+        </li>
+        <li class="pure-u-1-2">
+          {{input type="checkbox" name="locationData" checked=model.locationData}}
+          Location
+        </li>
+        <li class="pure-u-1-2">
+          {{input type="checkbox" name="userBehaviourData" checked=model.userBehaviourData}}
+          User Behaviour
+        </li>
+        <li class="pure-u-1-2">
+          {{input type="checkbox" name="computerNetworkData" checked=model.computerNetworkData}}
+          Computer/Network
+        </li>
+        <li class="pure-u-1-2">
+          {{input type="checkbox" name="financialData" checked=model.financialData}}
+          Financial
+        </li>
+        <li class="pure-u-1-2">
+          {{input type="checkbox" name="otherData" checked=model.otherData}}
+          Other
+          {{#if isShowingOther}}
+            {{textarea value=name cols="80" rows="6"}}
+          {{/if}}
+        </li>
     </ul>
 
-    <ul>
+    <ul class="non-bullet-list">
       <li>
         {{input type="checkbox" name="noData" checked=model.noData }} 
         We don’t collect any user data
