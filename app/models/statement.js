@@ -23,10 +23,10 @@ let Statement = DS.Model.extend({
 
 
     //why
-    extraReasons: DS.attr(),
+    extraReasons: Ember.A(),
 
     //Sharing
-    sharingParties: DS.attr(),
+    sharingParties: Ember.A(),
 
 
 });
