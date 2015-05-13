@@ -18,20 +18,10 @@ We collect personal information from you, including information about your
 
 <p>
 We collect this data from
-  {{#if model.userDataSource}}
-    the information you give us,
-  {{/if}}
-  {{#if model.publicDataSource}}
-    public sources
-  {{/if}}
-
-  {{#if model.publicDataSource}}
-    third parties,
-  {{/if}}
-
-  {{#if model.otherSourceInfo}}
-    {{model.otherSourceInfo}}
-  {{/if}}
+  {{#if model.userDataSource}} the information you give us, {{/if}}
+  {{#if model.publicDataSource}} public sources {{/if}}
+  {{#if model.publicDataSource}} third parties, {{/if}}
+  {{#if model.otherSourceInfo}} {{model.otherSourceInfo}} {{/if}}
 </p>
 
 
@@ -42,8 +32,16 @@ We collect this data from
   {{/each}}
 </p>
 
+<p>
+  {{#if model.thirdPartySharingNameOne}}
+    Besides our staff, we share this information with {{model.thirdPartySharingNameOne}}
+      {{#if model.thirdPartySharingNameTwo}}
+        and {{model.thirdPartySharingNameTwo}}
+      {{/if}}
+    in order to {{model.thirdPartySharingPurpose}}.
+  {{/if}}
+</p>
 
-Besides our staff, we share this information with Google Adsense in a deidentified form in order to serve you ads.
 <p>
 It’s optional to share [_your professional networks_] with us, however if you choose not to [_some personalisation and features will not be available_].
 </p>
