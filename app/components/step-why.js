@@ -5,10 +5,10 @@ export default Ember.Component.extend({
     addReason: function () {
       var reasons = this.get('model.statement.extraReasons');
       if (! reasons) {
-        this.set('model.statement.extraReasons', Ember.A(['one']));
+        this.set('model.statement.extraReasons', Ember.A(['']));
       }
       else {
-        reasons.pushObject('more');
+        reasons.pushObject('');
       }
     }
   },
