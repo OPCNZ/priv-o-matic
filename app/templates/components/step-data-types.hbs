@@ -1,36 +1,41 @@
 
+
 <ul>
   <li>
-    {{input type="checkbox" name="identityData" checked=model.statement.identityData}} 
-    Identity (email/etc) 
+    {{input type="checkbox" name="identityData" checked=model.statement.identityData}}
+    Identity (email/etc)
   </li>
   <li>
-    {{input type="checkbox" name="locationData" checked=model.statement.locationData}} 
+    {{input type="checkbox" name="locationData" checked=model.statement.locationData}}
     Location
   </li>
   <li>
-    {{input type="checkbox" name="userBehaviourData" checked=model.statement.userBehaviourData}} 
+    {{input type="checkbox" name="userBehaviourData" checked=model.statement.userBehaviourData}}
     User Behaviour
   </li>
   <li>
-    {{input type="checkbox" name="computerNetworkData" checked=model.statement.computerNetworkData}} 
+    {{input type="checkbox" name="computerNetworkData" checked=model.statement.computerNetworkData}}
     Computer/Network
   </li>
   <li>
-    {{input type="checkbox" name="financialData" checked=model.statement.financialData}} 
+    {{input type="checkbox" name="financialData" checked=model.statement.financialData}}
     Financial
   </li>
   <li>
-    {{input type="checkbox" name="model.statement.otherData" checked=isShowingOther}} 
+    {{input type="checkbox" name="model.statement.otherData" checked=model.statement.otherData}}
     Other
-    {{#if isShowingOther}}
+    {{#if model.statement.otherData}}
       {{textarea value=model.statement.otherDataInfo cols="80" rows="6"}}
     {{/if}}
   </li>
   <li>
-    {{input type="checkbox" name="noData" checked=model.statement.noData }} 
+    {{input type="checkbox" name="noData" checked=model.statement.noData }}
     We don’t collect any user data
   </li>
+
+  {{#if model.statement.noData}}
+    You don't need a privacy statement then. No point filling this out any futher.
+  {{/if}}
 </ul>
 
 {{yield}}
