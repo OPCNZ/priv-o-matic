@@ -36,8 +36,13 @@ We collect this data from
 
 
 <p>
-We collect this data because we need{{model.collectionReason}} _to find therapy cats for our users in their general vacinity_. We also need _to allow people to recommend therapy-cats to other members of their professional network_.
+  We collect this data because we need to {{model.collectionReason}}.
+  {{#each model.extraReasons as |reason|}}
+    also, we need to {{reason}}.
+  {{/each}}
 </p>
+
+
 Besides our staff, we share this information with Google Adsense in a deidentified form in order to serve you ads.
 <p>
 It’s optional to share [_your professional networks_] with us, however if you choose not to [_some personalisation and features will not be available_].
