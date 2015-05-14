@@ -64,20 +64,8 @@ Step.reopenClass({
   },
   {
     id: 10,
-    title: 'Privacy Statement',
-    name: "step-statement-2",
-    isCompleted: false,
-  },
-  {
-    id: 11,
     title: 'Retention',
     name: "step-retention",
-    isCompleted: false,
-  },
-  {
-    id: 12,
-    title: 'Privacy Statement',
-    name: "step-statement-3",
     isCompleted: false,
   },
   ]
