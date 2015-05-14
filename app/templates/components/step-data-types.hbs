@@ -38,17 +38,17 @@
     <ul class="non-bullet-list">
       <li>
         {{input type="checkbox" name="noData" checked=model.statement.noData }}
-        We don’t collect any user data
+        <label>We don’t collect any user data</label>
       </li>
     </ul>
-
-    {{#link-to "steps.step" 2 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
 
     {{#if model.statement.noData}}
       <div>
         <p>You don’t need a privacy statement then. No point in filling this out any further.</p>
       </div>
     {{/if}}
+
+    {{#link-to "steps.step" 2 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
 
     {{yield}}
   </div>
