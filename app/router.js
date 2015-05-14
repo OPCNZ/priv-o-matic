@@ -11,6 +11,6 @@ export default Router.map(function() {
 
     this.route('finish');
   });
-  this.route('whatsThis', {path: 'whatsThis'});
+  this.route('whats-this', {path: 'whats-this'});
 
 });
