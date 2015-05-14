@@ -54,12 +54,7 @@ Step.reopenClass({
     id: 8,
     statement: 1,
     title: 'Privacy Statement',
-<<<<<<< HEAD
     name: "step-statement-1",
-    isCompleted: false,
-=======
-    name: "step-statement"
->>>>>>> origin/bw/develop
   },
   {
     id: 9,
