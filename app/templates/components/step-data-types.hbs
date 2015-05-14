@@ -5,27 +5,27 @@
     <ul class="pure-g non-bullet-list">
         <li class="pure-u-1-2">
           {{input type="checkbox" name="identityData" checked=model.identityData}}
-          Identity (email/etc)
+          <label>Identity (email/etc)</label>
         </li>
         <li class="pure-u-1-2">
           {{input type="checkbox" name="locationData" checked=model.locationData}}
-          Location
+          <label>Location</label>
         </li>
         <li class="pure-u-1-2">
           {{input type="checkbox" name="userBehaviourData" checked=model.userBehaviourData}}
-          User Behaviour
+          <label>User Behaviour</label>
         </li>
         <li class="pure-u-1-2">
           {{input type="checkbox" name="computerNetworkData" checked=model.computerNetworkData}}
-          Computer/Network
+          <label>Computer/Network</label>
         </li>
         <li class="pure-u-1-2">
           {{input type="checkbox" name="financialData" checked=model.financialData}}
-          Financial
+          <label>Financial</label>
         </li>
         <li class="pure-u-1-2">
           {{input type="checkbox" name="otherData" checked=model.otherData}}
-          Other
+          <label>Other</label>
           {{#if isShowingOther}}
             {{textarea value=name cols="80" rows="6"}}
           {{/if}}
