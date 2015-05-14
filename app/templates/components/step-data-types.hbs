@@ -3,47 +3,57 @@
     <p>We collect the following types of data about our users:</p>
 
     <ul class="pure-g non-bullet-list">
-        <li class="pure-u-1-2">
-          {{input type="checkbox" name="identityData" checked=model.identityData}}
-          <label>Identity (email/etc)</label>
-        </li>
-        <li class="pure-u-1-2">
-          {{input type="checkbox" name="locationData" checked=model.locationData}}
-          <label>Location</label>
-        </li>
-        <li class="pure-u-1-2">
-          {{input type="checkbox" name="userBehaviourData" checked=model.userBehaviourData}}
-          <label>User Behaviour</label>
-        </li>
-        <li class="pure-u-1-2">
-          {{input type="checkbox" name="computerNetworkData" checked=model.computerNetworkData}}
-          <label>Computer/Network</label>
-        </li>
-        <li class="pure-u-1-2">
-          {{input type="checkbox" name="financialData" checked=model.financialData}}
-          <label>Financial</label>
-        </li>
-        <li class="pure-u-1-2">
-          {{input type="checkbox" name="otherData" checked=model.otherData}}
-          <label>Other</label>
-          {{#if isShowingOther}}
-            {{textarea value=name cols="80" rows="6"}}
-          {{/if}}
-        </li>
+      <li class="pure-u-1-2">
+        {{input type="checkbox" name="identityData" checked=model.statement.identityData}}
+        <label>Identity (email/etc)</label>
+        Identity (email/etc)
+      </li>
+      <li class="pure-u-1-2">
+        {{input type="checkbox" name="locationData" checked=model.statement.locationData}}
+        Location
+        <label>Location</label>
+      </li>
+      <li class="pure-u-1-2">
+        {{input type="checkbox" name="userBehaviourData" checked=model.statement.userBehaviourData}}
+        User Behaviour
+        <label>User Behaviour</label>
+      </li>
+      <li class="pure-u-1-2">
+        {{input type="checkbox" name="computerNetworkData" checked=model.statement.computerNetworkData}}
+        Computer/Network
+        <label>Computer/Network</label>
+      </li>
+      <li class="pure-u-1-2">
+        {{input type="checkbox" name="financialData" checked=model.statement.financialData}}
+        Financial
+        <label>Financial</label>
+      </li>
+      <li class="pure-u-1-2">
+        {{input type="checkbox" name="model.statement.otherData" checked=model.statement.otherData}}
+        <label>Other</label>
+        {{#if model.statement.otherData}}
+          {{textarea value=model.statement.otherDataInfo cols="80" rows="6"}}
+        {{/if}}
+      </li>
+      <li class="pure-u-1-2">
+        {{input type="checkbox" name="otherData" checked=model.otherData}}
+      </li>
     </ul>
 
     <ul class="non-bullet-list">
       <li>
-        {{input type="checkbox" name="noData" checked=model.noData }} 
+        {{input type="checkbox" name="noData" checked=model.statement.noData }}
         We don’t collect any user data
       </li>
     </ul>
 
     {{#link-to "steps.step" 2 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
 
-    <div>
-      <p>You don’t need a privacy statement then. No point in filling this out any further.</p>
-    </div>
+    {{#if model.statement.noData}}
+      <div>
+        <p>You don’t need a privacy statement then. No point in filling this out any further.</p>
+      </div>
+    {{/if}}
 
     {{yield}}
   </div>
@@ -85,6 +95,3 @@
     </div>
   </div>
 </div>
-
-
-
