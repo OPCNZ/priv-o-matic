@@ -8,17 +8,19 @@
     {{render "statement" model.statement}}
 
     <p>
-      Make your statement better by: <br />
+      Make your statement better by:
 
-      {{input type="checkbox" checked=model.statement.keptSecurely}}
-      <label>reassuring your users their data is kept securely</label>
-
-      {{input type="checkbox" checked=model.statement.dataDestruction}}
-      <label>reassuring your users their data is destroyed when it is no longer necessary</label>
-
+      <ul class="non-bullet-list">
+        <li>
+          {{input type="checkbox" checked=model.statement.keptSecurely}}
+          <label>reassuring your users their data is kept securely</label>
+        </li>
+        <li>
+          {{input type="checkbox" checked=model.statement.dataDestruction}}
+          <label>reassuring your users their data is destroyed when it is no longer necessary</label>
+        </li>
+      </ul>
     </p>
-
-    {{#link-to "steps.step" 9 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
   </div>
 
   <div class="pure-u-1-4">
