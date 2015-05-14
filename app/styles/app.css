@@ -75,6 +75,10 @@ input[type="checkbox"] + label {
   margin-right: 30px;
 }
 
+/* doen't use pure-css' .hidden as it uses !important */
+._hidden {
+  display: none;
+}
 
 /* ---- layer-2/modules/landing-page ---- */
 
