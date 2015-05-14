@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import Ember from 'ember';
 
 let Statement = DS.Model.extend({
     steps: DS.hasMany('step', {async: true}),
