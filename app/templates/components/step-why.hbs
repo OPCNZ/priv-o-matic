@@ -7,7 +7,6 @@
 
 <div class="pure-g">
   <div class="pure-u-3-4">
-    {{yield}}
     <p>
       We collect this data because we need to {{input value=model.statement.collectionReason placeholder="do something that directly relates to our business"}}
     </p>
@@ -15,7 +14,6 @@
     {{#each model.statement.extraReasons as |_ index|}}
       <p>
         also, we need to
-        {{!-- this should work when ek/array-item-input has been merged --}}
         {{array-item-input array=model.statement.extraReasons index=index placeholder="do another thing related to our business"}}
       </p>
     {{/each}}

@@ -4,41 +4,41 @@
 
     <ul class="pure-g non-bullet-list">
       <li class="pure-u-1-2">
-        {{input type="checkbox" name="identityData" checked=model.statement.identityData}}
-        <label>Identity (email/etc)</label>
+        {{input type="checkbox" id="identityData" checked=model.statement.identityData}}
+        <label for="identityData">Identity (email/etc)</label>
       </li>
       <li class="pure-u-1-2">
-        {{input type="checkbox" name="locationData" checked=model.statement.locationData}}
-        <label>Location</label>
+        {{input type="checkbox" id="locationData" checked=model.statement.locationData}}
+        <label for="locationData">Location</label>
       </li>
       <li class="pure-u-1-2">
-        {{input type="checkbox" name="userBehaviourData" checked=model.statement.userBehaviourData}}
-        <label>User Behaviour</label>
+        {{input type="checkbox" id="userBehaviourData" checked=model.statement.userBehaviourData}}
+        <label for="userBehaviourData">User Behaviour</label>
       </li>
       <li class="pure-u-1-2">
-        {{input type="checkbox" name="computerNetworkData" checked=model.statement.computerNetworkData}}
-        <label>Computer/Network</label>
+        {{input type="checkbox" id="computerNetworkData" checked=model.statement.computerNetworkData}}
+        <label for="computerNetworkData">Computer/Network</label>
       </li>
       <li class="pure-u-1-2">
-        {{input type="checkbox" name="financialData" checked=model.statement.financialData}}
-        <label>Financial</label>
+        {{input type="checkbox" id="financialData" checked=model.statement.financialData}}
+        <label for="financialData">Financial</label>
       </li>
       <li class="pure-u-1-2">
-        {{input type="checkbox" name="model.statement.otherData" checked=model.statement.otherData}}
-        <label>Other</label>
+        {{input type="checkbox" id="otherData" checked=model.statement.otherData}}
+        <label for="otherData">Other</label>
         {{#if model.statement.otherData}}
           {{textarea value=model.statement.otherDataInfo cols="80" rows="6"}}
         {{/if}}
       </li>
       <li class="pure-u-1-2">
-        {{input type="checkbox" name="otherData" checked=model.otherData}}
+        {{input type="checkbox" id="otherData" checked=model.otherData}}
       </li>
     </ul>
 
     <ul class="non-bullet-list">
       <li>
-        {{input type="checkbox" name="noData" checked=model.statement.noData }}
-        <label>We don’t collect any user data</label>
+        {{input type="checkbox" id="noData" checked=model.statement.noData }}
+        <label for="noData">We don’t collect any user data</label>
       </li>
     </ul>
 
