@@ -1,6 +1,6 @@
 
 <div class="pure-g">
-  <div class="pure-u-2-3">
+  <div class="pure-u-3-4">
     {{yield}}
 
     <p>Sometimes information is optional, and will limit the kinds of services provided. </p>
@@ -28,12 +28,14 @@
     <p>
       <button type="button">we have another reason</button>
     </p>
+
+    {{#link-to "steps.step" 7 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
   </div>
 
-  <div class="pure-u-1-3">
-    <button type="button">That matters?</button>
+  <div class="pure-u-1-4">
+    <button type="button" class="pure-button button-black-on-white help-text-button" onclick="$('#help-text').toggle()">That matters?</button>
 
-    <div>
+    <div id="help-text" class="help-text _hidden">
       <p>
         If there are consequences You’re required to inform users of any consequences if all or any of the requested information is not provided
       </p>

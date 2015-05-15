@@ -1,24 +1,70 @@
-{{yield}}
+<div class="pure-g">
+  <div class="pure-u-3-4">
+    {{yield}}
 
+    <ul class="non-bullet-list">
+        <li>
+          {{input type="checkbox" name="userDataSource" checked=model.statement.userDataSource}}
+          <label>Our users themselves</label>
+        </li>
+        <li>
+          {{input type="checkbox" name="publicDataSource" checked=model.statement.publicDataSource}}
+          <label>Public sources of information on our users</label>
+        </li>
+        <li>
+          {{input type="checkbox" name="thirdPartyDataSource" checked=model.statement.thirdPartyDataSource}}
+          <label>3rd parties (a credit agency for instance)</label>
+        </li>
+        <li>
+          {{input type="checkbox" name="model.statement.otherDataSource" checked=model.statement.otherDataSource}}
+          <label>Other</label>
+            {{#if model.statement.otherDataSource}}
+              {{textarea value=model.statement.otherDataSourceInfo cols="80" rows="6"}}
+            {{/if}}
+        </li>
+    </ul>
 
-<ul>
-    <li>
-      {{input type="checkbox" name="userDataSource" checked=model.statement.userDataSource}}
-      Our users themselves
-    </li>
-    <li>
-      {{input type="checkbox" name="publicDataSource" checked=model.statement.publicDataSource}}
-      Public sources of information on our users
-    </li>
-    <li>
-      {{input type="checkbox" name="thirdPartyDataSource" checked=model.statement.thirdPartyDataSource}}
-      3rd parties (a credit agency for instance)
-    </li>
-    <li>
-      {{input type="checkbox" name="model.statement.otherDataSource" checked=model.statement.otherDataSource}}
-      Other
-        {{#if model.statement.otherDataSource}}
-          {{textarea value=model.statement.otherDataSourceInfo cols="80" rows="6"}}
-        {{/if}}
-    </li>
-</ul>
+    <div id="other-source" class="_hidden">
+      <p>
+        In most cases you’ll need to get info directly from the user.
+        See
+        <a href="https://privacy.org.nz/how-to-comply/getting-started/purpose/#collection">Fair Collection</a>
+        or
+        <a href="https://privacy.org.nz/the-privacy-act-and-codes/privacy-principles/source-of-personal-information-principle-two/">Privacy Principle 2</a>
+        for more.
+      </p>
+    </div>
+
+    <div id="third-party-source" class="_hidden">
+      <p>
+        In most cases you’ll need to ask permission to do this. 
+        See
+        <a href="https://privacy.org.nz/how-to-comply/getting-started/purpose/#collection">Fair Collection</a>
+        or
+        <a href="https://privacy.org.nz/the-privacy-act-and-codes/privacy-principles/source-of-personal-information-principle-two/">Privacy Principle 2</a>
+        for more.
+      </p>
+    </div>
+
+    {{#link-to "steps.step" 3 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
+  </div>
+
+  <div class="pure-u-1-4">
+    <button type="button" class="pure-button button-black-on-white help-text-button" onclick="$('#help-text').toggle()">Why does this matter?</button>
+
+    <div id="help-text" class="help-text _hidden">
+      <p>
+        When collecting information it's almost always best to get it directly from the user. By knowing what information you have and what you're doing with it, users are far less likely to be surprised or upset.
+      </p>
+
+      <p>
+        See
+        <a href="https://privacy.org.nz/how-to-comply/getting-started/purpose/#collection">Fair Collection</a>
+        or
+        <a href="https://privacy.org.nz/the-privacy-act-and-codes/privacy-principles/source-of-personal-information-principle-two/">Privacy Principle 2</a>
+        for more.
+      </p>
+
+    </div>
+  </div>
+</div>

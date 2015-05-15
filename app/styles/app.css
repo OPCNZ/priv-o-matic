@@ -1,0 +1,207 @@
+
+/* ---- setup ---- */
+/* variables mixins */
+
+
+/* ---- layer-0 ---- */
+/* browser inbuilt styles */
+
+
+/* ---- layer-1/normalise ---- */
+/* Normalise.css is pulled in by pure */
+
+
+/* ---- layer-2/element-styles ---- */
+
+/* Pure seems to hijack the font stack, requiring references to it's grid-system
+ *  to change the default font.
+ */
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+  /* Set your content font stack here: */
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  color: rgb(110, 110, 110);
+  line-height: 1.4em;
+}
+
+h2 {
+  font-family: 'Bitter', serif;
+  text-align: center;
+  font-size: 1.9em;
+  font-weight: 400;
+  color: rgb(0, 65, 80);
+}
+
+/* Custom checkboxes made out of borders.
+ * This requires a label directly after the checkbox to work.
+ */
+
+input[type=checkbox] {
+  display: none;
+  margin-top:    1em;
+  margin-bottom: 1em;
+}
+
+input[type=checkbox] + label:before {
+  content: '';
+
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  margin-top:    1em;
+
+  margin-right: 0.6em;
+  position: relative;
+  top: 10px;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background-color: rgb(239, 236, 232);
+  content: '';
+}
+
+input[type="checkbox"] + label {
+  font-size: 20px;
+}
+
+
+/* ---- layer-2/modules/site-wide ---- */
+
+.container {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+/* doen't use pure-css' .hidden as it uses !important */
+._hidden {
+  display: none;
+}
+
+/* ---- layer-2/modules/landing-page ---- */
+
+.p2 {
+  margin-top: 36px;
+}
+
+.b1 {
+    margin-top: 48px;
+}
+
+.b2 {
+  margin-top: 60px;
+}
+
+.logo-image {
+  margin-top: 60px;
+}
+
+.get-started-button {
+  width: 10.5em;
+  font-weight:  400;
+}
+
+.whats-this-button {
+  width: 15em;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.center-children {
+  text-align: center;
+}
+
+.centered-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ---- layer-2/modules/step-pages ---- */
+
+.step-heading {
+  margin-top: 60px;
+}
+
+.next-step-button {
+  width: 11em;
+  font-weight: 400;
+  margin: 0 auto;
+  display: block;
+}
+
+.help-text-button {
+  width: 100%;
+  font-size: 14px;
+  margin-top: 25px;
+}
+
+
+/* ---- layer-2/modules/buttons ---- */
+
+.button-blue {
+  color: white;
+  background-color: rgb(86,178,203);
+}
+
+.button-red-text {
+  color: rgb(225, 95,85);
+  border: 1px solid rgb(225, 95,85);
+  background-color: white;
+}
+
+.button-black-on-white {
+  color: black;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.button-xlarge {
+  font-size: 125%;
+}
+
+
+/* ---- layer-2/modules/custom-lists ---- */
+
+.non-bullet-list {
+  padding-left: 0;
+}
+
+.non-bullet-list li {
+  list-style-type: none;
+
+}
+
+
+/* ---- layer-2/modules/help-text-area ---- */
+
+.pure-g .help-text {
+  font-size: 15px;
+}
+
+.help-text {
+  width: 100%;
+  color: rgb(51, 51, 51);
+  background-color: rgb(239, 236, 232);
+  line-height: 1.4em;
+}
+
+.help-text p:first-child {
+  margin-top: 0;
+  padding-top: 9px;
+}
+
+.help-text > * {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+
+/* ---- layer-3/grid-systems ---- */
+/* This is supplied by pure-css */
+
+/* ---- layer-4/themes ---- */
+/* not required */
