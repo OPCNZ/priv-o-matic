@@ -11,7 +11,7 @@ export default Ember.Component.extend({
         parties.pushObject('more');
       }
     },
-    showHelp: function () {
+    toggleHelp: function () {
       this.toggleProperty('showHelp');
     }
   },
