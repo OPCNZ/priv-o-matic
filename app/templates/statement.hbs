@@ -1,4 +1,53 @@
-<h1>YOUR STATEMENT GOES HERE</h1>
-    <code>
-      lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua at vero eos et accusam et justo duo dolores et ea rebum stet clita kasd gubergren no sea takimata sanctus est lorem ipsum dolor sit amet lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod.
-    </code>
+
+
+{{model.id}}
+
+<code>
+<p>
+We collect personal information from you, including information about your
+  {{#if model.identityData}} identity,{{/if}}
+  {{#if model.locationData}} location, {{/if}}
+  {{#if model.computerNetworkData}}computer/network information, {{/if}}
+  {{#if model.userBehaviourData}} behaviour, {{/if}}
+  {{#if model.financialData}} finances, {{/if}}
+  {{#if model.otherDataInfo}} {{model.otherDataInfo}} {{/if}}.
+</p>
+
+<p>
+We collect this data from
+  {{#if model.userDataSource}} the information you give us, {{/if}}
+  {{#if model.publicDataSource}} public sources {{/if}}
+  {{#if model.publicDataSource}} third parties, {{/if}}
+  {{#if model.otherSourceInfo}} {{model.otherSourceInfo}} {{/if}}
+</p>
+
+
+<p>
+  We collect this data because we need to {{model.collectionReason}}.
+  {{#each model.extraReasons as |reason|}}
+    also, we need to {{reason}}.
+  {{/each}}
+</p>
+
+<p>
+  {{#if model.thirdPartySharingNameOne}}
+    Besides our staff, we share this information with {{model.thirdPartySharingNameOne}}
+      {{#if model.thirdPartySharingNameTwo}}
+        and {{model.thirdPartySharingNameTwo}}
+      {{/if}}
+    in order to {{model.thirdPartySharingPurpose}}.
+  {{/if}}
+</p>
+
+
+<p>
+You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong. If you’d like to ask for a copy of your information, or to have it corrected, please contact us at {{model.emailAddress}}
+  {{#if model.phoneNumber}}(or {{model.phoneNumber}}){{/if}}
+  {{#if model.postalAddress}}, or {{postalAddress}}){{/if}}.
+</p>
+</code>
+
+
+<h2>Data Sources</h2>
+<code>
+</code>
