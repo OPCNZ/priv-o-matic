@@ -42,7 +42,6 @@
 
 
     {{#if model.statement.onlyTheseReasons}}
-        ready
         {{#link-to "steps.step" 4 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
     {{else}}
         <button {{action "notReady"}} class="pure-button button-blue next-step-button">move along</button>
