@@ -10,9 +10,9 @@ var Step = DS.Model.extend({
 
 Step.reopenClass({
   FIXTURES: [
-  {  id: 1,
+  {  id: 1, 
     statement: 1,
-    title: 'We collect the following types of data about our users:',
+    title: 'Information',
     name: 'step-data-types'
   },
   {  id: 2,
@@ -54,13 +54,19 @@ Step.reopenClass({
     id: 8,
     statement: 1,
     title: 'Privacy Statement',
-    name: "step-statement"
+    name: "step-statement-1",
   },
   {
     id: 9,
     statement: 1,
     title: 'Security',
     name: "step-security"
+  },
+  {
+    id: 10,
+    title: 'Retention',
+    name: "step-retention",
+    isCompleted: false,
   },
   ]
 });
