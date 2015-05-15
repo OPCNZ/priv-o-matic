@@ -159,6 +159,11 @@ input[type="checkbox"] + label {
   background-color: white;
 }
 
+.button-black-on-white:visited, .button-black-on-white:hover, .button-black-on-white:active {
+  background-color: white;
+  background-image: none;
+}
+
 .button-xlarge {
   font-size: 125%;
 }
