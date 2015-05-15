@@ -10,6 +10,9 @@ export default Ember.Component.extend({
       else {
         parties.pushObject('more');
       }
+    },
+    showHelp: function () {
+      this.toggleProperty('showHelp');
     }
   },
 });
