@@ -36,25 +36,29 @@
   </div>
 
   <div class="pure-u-1-4">
-    <button type="button" class="pure-button button-black-on-white help-text-button" onclick="$('#help-text').toggle()">Information needs a purpose?</button>
+      <button {{action "toggleHelp"}} class="pure-button button-black-on-white help-text-button">Information needs a purpose?</button>
 
-    <div id="help-text" class="help-text _hidden">
-      <p>
-        You need a purpose related to a function of your business for each piece of information you collect. Information you collect needs to be necessary for these purposes, and must support your business in a clearly defined way. If you don’t actually need the information, it’s better to not collect it.
-      </p>
+          {{#if showHelp}}
+              <div id="help-text" class="help-text">
 
-      <p>
-        If you are given information that you didn’t ask for (didn’t &ldquo;collect&rdquo;) these requirements don’t apply, however the provisions (covered later on) requiring safe storage, correction, and access by users still apply.
-      </p>
+              <p>
+                You need a purpose related to a function of your business for each piece of information you collect. Information you collect needs to be necessary for these purposes, and must support your business in a clearly defined way. If you don’t actually need the information, it’s better to not collect it.
+              </p>
 
-      <p>
-        Identify a clear purpose and sticking to it is the key to getting privacy right. See
-        <a href="https://privacy.org.nz/how-to-comply/getting-started/">Getting Started</a>
-        and
-        <a href="https://privacy.org.nz/purpose-for-collection-of-personal-information-principle-one/">Privacy Principle 1</a>
-        for more.
-      </p>
+              <p>
+                If you are given information that you didn’t ask for (didn’t &ldquo;collect&rdquo;) these requirements don’t apply, however the provisions (covered later on) requiring safe storage, correction, and access by users still apply.
+              </p>
 
-    </div>
+              <p>
+                Identify a clear purpose and sticking to it is the key to getting privacy right. See
+                <a href="https://privacy.org.nz/how-to-comply/getting-started/">Getting Started</a>
+                and
+                <a href="https://privacy.org.nz/purpose-for-collection-of-personal-information-principle-one/">Privacy Principle 1</a>
+                for more.
+              </p>
+
+              </div>
+          {{/if}}
   </div>
+
 </div>
