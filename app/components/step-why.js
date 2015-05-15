@@ -6,7 +6,7 @@ export default Ember.Component.extend({
       var reasons = this.get('model.statement.extraReasons');
       reasons.pushObject('');
     },
-    showHelp: function () {
+    toggleHelp: function () {
       console.log("showing help")
       this.toggleProperty('showHelp');
     }
