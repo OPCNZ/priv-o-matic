@@ -6,8 +6,5 @@ export default Ember.Component.extend({
       var reasons = this.get('model.statement.extraReasons');
       reasons.pushObject('');
     },
-    }
   },
-
-
 });
