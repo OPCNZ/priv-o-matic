@@ -13,7 +13,8 @@ module.exports = function(environment) {
       }
     },
     contentSecurityPolicy: {
-      'style-src': "'self' 'unsafe-inline'",
+      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com",
+      'font-src': "'self' http://fonts.gstatic.com",
     },
     APP: {
       // Here you can pass flags/options to your application instance
