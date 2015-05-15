@@ -50,43 +50,44 @@
 
     {{#link-to "steps.step" 2 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
 
-    {{yield}}
   </div>
 
   <div class="pure-u-1-4">
-    <button type="button" class="pure-button button-black-on-white help-text-button" onclick="$('#help-text').toggle()">What should I list?</button>
+    <button {{action "toggleHelp"}} type="button" class="pure-button button-black-on-white help-text-button">What should I list?</button>
 
-    <div id="help-text" class="help-text _hidden">
-      <p class="first-help-text-item">
-        If there's a reasonable chance information can be used to identify a living person, it's considered &ldquo;Personal Information&rdquo; by New Zealand law (even if no names appear). The information doesn't need to be &ldquo;secret&rdquo; or &ldquo;sensitive&ldquo;—it just needs to be about them.
-      </p>
+    {{#if showHelp}}
+        <div id="help-text" class="help-text">
+          <p class="first-help-text-item">
+            If there's a reasonable chance information can be used to identify a living person, it's considered &ldquo;Personal Information&rdquo; by New Zealand law (even if no names appear). The information doesn't need to be &ldquo;secret&rdquo; or &ldquo;sensitive&ldquo;—it just needs to be about them.
+          </p>
 
-      <p>Examples of personal information include,</p>
+          <p>Examples of personal information include,</p>
 
-      <p>
-        <strong>Identity information:</strong> <br />
-        Name, username, email-address,  password, date-of-birth/Age, gender, etc
-      </p>
-      <p>
-        <strong>Location information:</strong> <br />
-        GPS Location, physical addresses, etc
-      </p>
-      <p>
-        <strong>Behavioural information:</strong> <br />
-        Interests, browsing habits, searches, contacts or associates, etc
-      </p>
-      <p>
-        <strong>Computer/Network information:</strong> <br />
-        Browser identifiers/fingerprint, IP address, network information, etc
-      </p>
-      <p>
-        <strong>Financial information:</strong> <br />
-        Credit card, purchase history, etc
-      </p>
+          <p>
+            <strong>Identity information:</strong> <br />
+            Name, username, email-address,  password, date-of-birth/Age, gender, etc
+          </p>
+          <p>
+            <strong>Location information:</strong> <br />
+            GPS Location, physical addresses, etc
+          </p>
+          <p>
+            <strong>Behavioural information:</strong> <br />
+            Interests, browsing habits, searches, contacts or associates, etc
+          </p>
+          <p>
+            <strong>Computer/Network information:</strong> <br />
+            Browser identifiers/fingerprint, IP address, network information, etc
+          </p>
+          <p>
+            <strong>Financial information:</strong> <br />
+            Credit card, purchase history, etc
+          </p>
 
-      <p>
-        &hellip; many other things. The types of information that can identify someone can be very broad.
-      </p>
-    </div>
+          <p>
+            &hellip; many other things. The types of information that can identify someone can be very broad.
+          </p>
+        </div>
+    {{/if}}
   </div>
 </div>
