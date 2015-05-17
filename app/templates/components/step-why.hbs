@@ -1,3 +1,10 @@
+  {{#if notReadyModal}}
+  <div>
+      Popping up help message
+      <button {{action "ackMessage"}}>i understand</button>
+  </div>
+  {{/if}}
+
 <div class="pure-g">
   <div class="pure-u-3-4">
     <p>
@@ -22,17 +29,23 @@
     </p>
 
     <ul class="non-bullet-list">
+
       <li>
         {{input type="checkbox" checked=model.statement.onlyTheseReasons id="onlyTheseReasons"}}
         <label for="onlyTheseReasons">Yes</label>
       </li>
       <li>
-        {{input type="checkbox" checked=model.statement.moreReasons id="moreReasons"}}
+        {{input type="checkbox" checked=model.statement.notOnlyTheseReasons id="moreReasons"}}
         <label for="moreReasons">No</label>
       </li>
     </ul>
 
-    {{#link-to "steps.step" 4 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
+
+    {{#if model.statement.onlyTheseReasons}}
+        {{#link-to "steps.step" 4 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
+    {{else}}
+        <button {{action "notReady"}} class="pure-button button-blue next-step-button">move along</button>
+    {{/if}}
   </div>
 
   <div class="pure-u-1-4">
