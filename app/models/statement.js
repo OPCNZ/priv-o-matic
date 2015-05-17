@@ -25,6 +25,7 @@ let Statement = DS.Model.extend({
 
     //why
     extraReasons: Ember.A(),
+    onlyTheseReasons: DS.attr('boolean', {default: false}),
 
     //Sharing
     sharingParties: Ember.A(),
