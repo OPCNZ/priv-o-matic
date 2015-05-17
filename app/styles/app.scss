@@ -75,6 +75,12 @@ input[type="checkbox"] + label {
   margin-right: 30px;
 }
 
+.centered-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* doen't use pure-css' .hidden as it uses !important */
 ._hidden {
   display: none;
@@ -94,7 +100,7 @@ input[type="checkbox"] + label {
   margin-top: 60px;
 }
 
-.logo-image {
+.landing-page .logo-image {
   margin-top: 60px;
 }
 
@@ -113,12 +119,37 @@ input[type="checkbox"] + label {
   text-align: center;
 }
 
-.centered-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+/* ---- layer-2/modules/whats-this-pages ---- */
+
+.whats-this-header {
+  margin-top: 3.7em;
+  margin-bottom: 1.3em;
 }
 
+.whats-this-text, .whats-this-header {
+  padding-right: 2.9em;
+  padding-left: 2.9em;
+}
+
+.whats-this-header .logo-image {
+  height: 1.8em;
+}
+
+.whats-this-header .tag-line {
+  position: relative;
+  bottom: 0.4em;
+  padding-left: 0.4em;
+}
+
+.whats-this-text p {
+  font-size: 0.8em;
+  line-height: 1.4em;
+}
+
+.whats-this-text .get-started-button {
+  margin-top: 1.9em;
+}
 
 /* ---- layer-2/modules/step-pages ---- */
 
