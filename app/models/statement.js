@@ -6,13 +6,13 @@ let Statement = DS.Model.extend({
 
 
     //Data types
-    otherDataInfo: DS.attr(),
     identityData: DS.attr('boolean', {default: false}),
     locationData: DS.attr('boolean', {default: false}),
     userBehaviourData: DS.attr('boolean', {default: false}),
     computerNetworkData: DS.attr('boolean', {default: false}),
     financialData: DS.attr('boolean', {default: false}),
     otherData: DS.attr('boolean', {default: false}),
+    otherDataInfo: DS.attr('string'),
     noData: DS.attr('boolean', {default: false}),
 
     //Data Sources
@@ -20,7 +20,7 @@ let Statement = DS.Model.extend({
     publicDataSource: DS.attr('boolean', {default: false}),
     thirdPartyDataSource: DS.attr('boolean', {default: false}),
     otherDataSource: DS.attr('boolean'),
-    otherDataSourceInfo: DS.attr(),
+    otherDataSourceInfo: DS.attr('string'),
 
 
     //why
