@@ -12,8 +12,8 @@ let Statement = DS.Model.extend({
     computerNetworkData: DS.attr('boolean'),
     financialData: DS.attr('boolean'),
     otherData: DS.attr('boolean'),
-    otherDataInfo: DS.attr('boolean'),
     noData: DS.attr('boolean'),
+    otherDataInfo: DS.attr(),
 
     //Data Sources
     userDataSource: DS.attr('boolean'),
