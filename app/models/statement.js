@@ -6,25 +6,26 @@ let Statement = DS.Model.extend({
 
 
     //Data types
-    identityData: DS.attr('boolean'),
-    locationData: DS.attr('boolean'),
-    userBehaviourData: DS.attr('boolean'),
-    computerNetworkData: DS.attr('boolean'),
-    financialData: DS.attr('boolean'),
-    otherData: DS.attr('boolean'),
-    otherDataInfo: DS.attr('boolean'),
-    noData: DS.attr('boolean'),
+    identityData: DS.attr('boolean', {default: false}),
+    locationData: DS.attr('boolean', {default: false}),
+    userBehaviourData: DS.attr('boolean', {default: false}),
+    computerNetworkData: DS.attr('boolean', {default: false}),
+    financialData: DS.attr('boolean', {default: false}),
+    otherData: DS.attr('boolean', {default: false}),
+    otherDataInfo: DS.attr('string'),
+    noData: DS.attr('boolean', {default: false}),
 
     //Data Sources
-    userDataSource: DS.attr('boolean'),
-    publicDataSource: DS.attr('boolean'),
-    thirdPartyDataSource: DS.attr('boolean'),
+    userDataSource: DS.attr('boolean', {default: false}),
+    publicDataSource: DS.attr('boolean', {default: false}),
+    thirdPartyDataSource: DS.attr('boolean', {default: false}),
     otherDataSource: DS.attr('boolean'),
-    otherDataSourceInfo: DS.attr(),
+    otherDataSourceInfo: DS.attr('string'),
 
 
     //why
     extraReasons: Ember.A(),
+    onlyTheseReasons: DS.attr('boolean', {default: false}),
 
     //Sharing
     sharingParties: Ember.A(),
