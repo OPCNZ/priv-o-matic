@@ -1,6 +1,6 @@
-  {{#if notReadyModal}}
+  {{#if showNotReadyModal}}
   <div>
-      Popping up help message
+      You must state all purposes.
       <button {{action "ackMessage"}}>i understand</button>
   </div>
   {{/if}}
@@ -18,7 +18,6 @@
       </p>
     {{/each}}
 
-
     <p>
       <button {{action "addReason"}} class="pure-button">we have another reason</button>
     </p>
@@ -28,8 +27,11 @@
       We only collect information that relates to these purposes:
     </p>
 
-    <ul class="non-bullet-list">
 
+
+
+
+    <ul class="non-bullet-list">
       <li>
         {{radio-button value=true checked=model.statement.onlyTheseReasons id="onlyTheseReasons"}}
         <label for="onlyTheseReasons">Yes</label>
