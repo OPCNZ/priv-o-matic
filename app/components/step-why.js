@@ -11,10 +11,13 @@ export default Ember.Component.extend({
       this.toggleProperty('showHelp');
     },
     notReady: function() {
-      this.set('notReadyModal', true);
+      /**
+        We're not ready to "move along" so pop up the modal instead
+      */
+      this.set('showNotReadyModal', true);
     },
     ackMessage: function () {
-      this.set('notReadyModal', false);
+      this.set('showNotReadyModal', false);
     }
   },
   readyToMoveOn: function () {
