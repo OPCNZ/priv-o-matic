@@ -46,9 +46,10 @@
       </div>
     {{/if}}
 
-    {{#link-to "steps.step" 2 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
+    {{yield}}
 
   </div>
+
 
   <div class="pure-u-1-4">
     <button {{action "toggleHelp"}} type="button" class="pure-button button-black-on-white help-text-button">What should I list?</button>
