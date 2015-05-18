@@ -54,6 +54,7 @@ input[type=checkbox] + label:before {
   margin-top:    1em;
 
   margin-right: 0.6em;
+  margin-left: 1.4em;
   position: relative;
   top: 10px;
 }
@@ -219,21 +220,24 @@ input[type="checkbox"] + label {
 }
 
 .modal {
-  /*margin-right: 1em;*/
-  background: #EEE;
-  padding: 2em;
-  font-size: 0.8em;
-  color: black;
-
   position: absolute;
   top: 0;
   right: 1em;
+  margin-top: 16px;
+
+  background: #EEE;
+  opacity: 0.97;
+  filter:alpha(opacity=97); /* For IE8 and earlier */
+  padding: 2em;
+  font-size: 0.8em;
+  color: black;
 }
 
 .modal-close-button {
   position: absolute;
-  right: 0.3em;
-  top: -0.7em;
+  right: 0.2em;
+  top: -0.6em;
+  margin-top: 16px;
 
   display: inline-block;
   width: 1.4em;
