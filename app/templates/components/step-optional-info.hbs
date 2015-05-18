@@ -12,7 +12,7 @@
       {{input type="text" value=model.statement.optionalConsequence placeholder="be unable to provide specific services"}}
     </p>
 
-    
+
 
     {{#each optionalData in model.statement.optionalData}}
       <div>
@@ -29,11 +29,12 @@
       <button type="button">we have more optional data</button>
     </p>
 
-    {{#link-to "steps.step" 7 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
+    {{yield}}
+
   </div>
 
   <div class="pure-u-1-4">
-  
+
     <button {{action "toggleHelp"}} class="pure-button button-black-on-white help-text-button">That matters?</button>
     {{#if showHelp}}
     <div id="help-text" class="help-text">
@@ -50,7 +51,7 @@
     </div>
     {{/if}}
   </div>
-  
+
 </div>
 
 
