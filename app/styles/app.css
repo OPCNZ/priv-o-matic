@@ -212,6 +212,43 @@ input[type="checkbox"] + label {
 }
 
 
+/* ---- layer-2/modules/custom-modal ---- */
+
+.modal-anchor {
+  position: relative;
+}
+
+.modal {
+  /*margin-right: 1em;*/
+  background: #EEE;
+  padding: 2em;
+  font-size: 0.8em;
+  color: black;
+
+  position: absolute;
+  top: 0;
+  right: 1em;
+}
+
+.modal-close-button {
+  position: absolute;
+  right: 0.3em;
+  top: -0.7em;
+
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 50%;
+
+  color: white;
+  background-color: black;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.2em;
+  text-align: center;
+  text-decoration: none;
+}
+
 /* ---- layer-2/modules/help-text-area ---- */
 
 .pure-g .help-text {
