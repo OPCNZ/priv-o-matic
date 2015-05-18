@@ -12,12 +12,12 @@
 
       <ul class="non-bullet-list">
         <li>
-          {{input type="checkbox" checked=model.statement.keptSecurely}}
-          <label>reassuring your users their data is kept securely</label>
+          {{input type="checkbox" checked=model.statement.keptSecurely id="keptSecurely"}}
+          <label for="keptSecurely">reassuring your users their data is kept securely</label>
         </li>
         <li>
-          {{input type="checkbox" checked=model.statement.dataDestruction}}
-          <label>reassuring your users their data is destroyed when it is no longer necessary</label>
+          {{input type="checkbox" checked=model.statement.dataDestruction id="dataDestruction"}}
+          <label for="dataDestruction">reassuring your users their data is destroyed when it is no longer necessary</label>
         </li>
       </ul>
     </p>
