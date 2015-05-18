@@ -1,25 +1,25 @@
 
 <div class="pure-g">
   <div class="pure-u-3-4">
-    {{yield}}
 
     <p>Are you required to collect any information by law?</p>
 
     <p>
-      {{input type="checkbox"}}
-      <label>No</label>
+      {{input type="checkbox" checked=notRequiredByLaw id="notRequiredByLaw"}}
+      <label for="notRequiredByLaw">No</label>
       <br />
-      {{input type="checkbox"}}
-      <label>Yes</label>
+      {{input type="checkbox" checked=model.statement.requiredByLaw id="requiredByLaw"}}
+      <label for="requiredByLaw">Yes</label>
     </p>
 
-    {{#link-to "steps.step" 8 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
+    {{yield}}
+
   </div>
 
   <div class="pure-u-1-4">
-    <button type="button" class="pure-button button-black-on-white help-text-button" onclick="$('#help-text').toggle()">That matters?</button>
-
-    <div id="help-text" class="help-text _hidden">
+    <button {{action "toggleHelp"}} class="pure-button button-black-on-white help-text-button">That matters?</button>
+    {{#if showHelp}}
+    <div id="help-text" class="help-text">
       <p>
         You’ll need to place a notice informing the user which laws this information is collected under, and whether supplying this information is voluntary or not.
       </p>
@@ -31,6 +31,7 @@
       </p>
 
     </div>
+    {{/if}}
   </div>
 </div>
 

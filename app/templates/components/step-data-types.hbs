@@ -30,9 +30,6 @@
           {{textarea value=model.statement.otherDataInfo cols="80" rows="6"}}
         {{/if}}
       </li>
-      <li class="pure-u-1-2">
-        {{input type="checkbox" id="otherData" checked=model.otherData}}
-      </li>
     </ul>
 
     <ul class="non-bullet-list">
@@ -45,13 +42,15 @@
     {{#if model.statement.noData}}
       <div class="modal">
         <p>You don’t need a privacy statement then. No point in filling this out any further.</p>
+        <button {{action "acknowledgeNoDataModal"}}>oh, okay then</button>
       </div>
       <a href="javascript: void(0)" class="modal-close-button">✕</a>
     {{/if}}
 
-    {{#link-to "steps.step" 2 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
+    {{yield}}
 
   </div>
+
 
   <div class="pure-u-1-4">
     <button {{action "toggleHelp"}} type="button" class="pure-button button-black-on-white help-text-button">What should I list?</button>

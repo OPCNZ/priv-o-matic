@@ -1,7 +1,6 @@
 
 <div class="pure-g">
   <div class="pure-u-3-4">
-    {{yield}}
 
     <p>Here’s a privacy statement to stick on your site. You should show this to users when you get information from them.</p>
 
@@ -12,21 +11,27 @@
 
       <ul class="non-bullet-list">
         <li>
-          {{input type="checkbox" checked=model.statement.keptSecurely}}
-          <label>reassuring your users their data is kept securely</label>
+          {{#link-to "steps.step" 9}}
+          {{input type="checkbox" checked=model.statement.keptSecurely id="keptSecurely"}}
+          <label for="keptSecurely">reassuring your users their data is kept securely</label>
+          {{/link-to}}
         </li>
         <li>
-          {{input type="checkbox" checked=model.statement.dataDestruction}}
-          <label>reassuring your users their data is destroyed when it is no longer necessary</label>
+          {{#link-to "steps.step" 10}}
+            {{input type="checkbox" checked=model.statement.dataDestruction id="dataDestruction"}}
+            <label for="dataDestruction">reassuring your users their data is destroyed when it is no longer necessary</label>
+          {{/link-to}}
+
         </li>
       </ul>
     </p>
   </div>
 
   <div class="pure-u-1-4">
-    <button type="button" class="pure-button button-black-on-white help-text-button" onclick="$('#help-text').toggle()">More about privacy</button>
+    <button {{action "toggleHelp"}} class="pure-button button-black-on-white help-text-button">More about privacy</button>
 
-    <div id="help-text" class="help-text _hidden">
+    {{#if showHelp}}
+    <div id="help-text" class="help-text">
       <p>
         You're required to show this to a user when you get information from them, or as soon as possible after that if this is not possible . See
         <a href="https://privacy.org.nz/collection-of-information-from-subject-principle-three/">Privacy Principle 3</a>
@@ -48,6 +53,7 @@
       </p>
 
     </div>
+    {{/if}}
   </div>
 </div>
 
