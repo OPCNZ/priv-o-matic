@@ -26,16 +26,17 @@
     {{/each}}
 
     <p>
-      <button type="button">we have another reason</button>
+      <button type="button">we have more optional data</button>
     </p>
 
     {{#link-to "steps.step" 7 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
   </div>
 
   <div class="pure-u-1-4">
-    <button type="button" class="pure-button button-black-on-white help-text-button" onclick="$('#help-text').toggle()">That matters?</button>
-
-    <div id="help-text" class="help-text _hidden">
+  
+    <button {{action "toggleHelp"}} class="pure-button button-black-on-white help-text-button">That matters?</button>
+    {{#if showHelp}}
+    <div id="help-text" class="help-text">
       <p>
         If there are consequences You’re required to inform users of any consequences if all or any of the requested information is not provided
       </p>
@@ -47,7 +48,9 @@
       </p>
 
     </div>
+    {{/if}}
   </div>
+  
 </div>
 
 
