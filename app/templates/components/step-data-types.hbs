@@ -1,5 +1,5 @@
 <div class="pure-g">
-  <div class="pure-u-3-4">
+  <div class="pure-u-3-4 modal-anchor">
     <p>We collect the following types of data about our users:</p>
 
     <ul class="pure-g non-bullet-list">
@@ -40,10 +40,11 @@
     </ul>
 
     {{#if model.statement.noData}}
-      <div>
+      <div class="modal">
         <p>You don’t need a privacy statement then. No point in filling this out any further.</p>
         <button {{action "acknowledgeNoDataModal"}}>oh, okay then</button>
       </div>
+      <a href="javascript: void(0)" class="modal-close-button">✕</a>
     {{/if}}
 
     {{yield}}
