@@ -9,6 +9,20 @@ export default Ember.Component.extend({
     toggleHelp: function () {
       console.log("showing help")
       this.toggleProperty('showHelp');
+    },
+    notReady: function() {
+      this.set('notReadyModal', true);
+    },
+    ackMessage: function () {
+      this.set('notReadyModal', false);
     }
   },
+  readyToMoveOn: function () {
+
+    //only these reasons
+    // &&
+    // //entered at least one reason
+    return (!! this.get('model.statement.onlyTheseReasons') && !! this.get('model.statement.collectionReason'));
+
+  }.property('model.statement.onlyTheseReasons', 'model.statement.collectionReason')
 });
