@@ -13,13 +13,15 @@
       ).
     </p>
 
-    {{#link-to "steps.step" 6 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
+    {{yield}}
+
   </div>
 
   <div class="pure-u-1-4">
-    <button type="button" class="pure-button button-black-on-white help-text-button" onclick="$('#help-text').toggle()">Why do they need to contact me?</button>
+    <button {{action "toggleHelp"}} class="pure-button button-black-on-white help-text-button">Why do they need to contact me?</button>
 
-    <div id="help-text" class="help-text _hidden">
+    {{#if showHelp}}
+    <div id="help-text" class="help-text">
       <p>
         It’s a requirement that users can request and correct any information you hold about them. This includes querying whether you hold information about them at all. This is part of your requirement to take reasonable steps to ensure your information is correct.
       </p>
@@ -34,5 +36,6 @@
       </p>
 
     </div>
+    {{/if}}
   </div>
 </div>
