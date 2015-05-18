@@ -213,6 +213,31 @@ input[type="checkbox"] + label {
 }
 
 
+/* ---- layer-2/modules/custom-text-inputs ---- */
+
+.text-input input[type="text"] {
+  border: none;
+}
+
+.text-input {
+  display: inline-block;
+  height: 0.3em;
+  position: relative;
+  top: 0.8em;
+
+  border: 2px solid black;
+  border-top: none;
+  padding: 0 0.2em;
+}
+
+.text-input input {
+  position: relative;
+  bottom: 1.3em;
+
+  font-size: 0.8em;
+}
+
+
 /* ---- layer-2/modules/custom-modal ---- */
 
 .modal-anchor {
