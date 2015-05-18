@@ -1,7 +1,6 @@
 
 <div class="pure-g">
   <div class="pure-u-3-4">
-    {{yield}}
 
     <p>Are you required to collect any information by law?</p>
 
@@ -13,7 +12,8 @@
       <label for="requiredByLaw">Yes</label>
     </p>
 
-    {{#link-to "steps.step" 8 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
+    {{yield}}
+
   </div>
 
   <div class="pure-u-1-4">

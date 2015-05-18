@@ -44,7 +44,7 @@
 
 
     {{#if model.statement.onlyTheseReasons}}
-        {{#link-to "steps.step" 4 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
+        {{yield}}
     {{else}}
         <button {{action "notReady"}} class="pure-button button-blue next-step-button">move along</button>
     {{/if}}
