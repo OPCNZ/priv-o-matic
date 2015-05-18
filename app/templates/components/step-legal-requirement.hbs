@@ -17,9 +17,9 @@
   </div>
 
   <div class="pure-u-1-4">
-    <button type="button" class="pure-button button-black-on-white help-text-button" onclick="$('#help-text').toggle()">That matters?</button>
-
-    <div id="help-text" class="help-text _hidden">
+    <button {{action "toggleHelp"}} class="pure-button button-black-on-white help-text-button">That matters?</button>
+    {{#if showHelp}}
+    <div id="help-text" class="help-text">
       <p>
         You’ll need to place a notice informing the user which laws this information is collected under, and whether supplying this information is voluntary or not.
       </p>
@@ -31,6 +31,7 @@
       </p>
 
     </div>
+    {{/if}}
   </div>
 </div>
 
