@@ -31,11 +31,11 @@
     <ul class="non-bullet-list">
 
       <li>
-        {{input type="checkbox" checked=model.statement.onlyTheseReasons id="onlyTheseReasons"}}
+        {{radio-button value=true checked=model.statement.onlyTheseReasons id="onlyTheseReasons"}}
         <label for="onlyTheseReasons">Yes</label>
       </li>
       <li>
-        {{input type="checkbox" checked=model.statement.notOnlyTheseReasons id="moreReasons"}}
+        {{radio-button value=false checked=model.statement.onlyTheseReasons id="moreReasons"}}
         <label for="moreReasons">No</label>
       </li>
     </ul>
