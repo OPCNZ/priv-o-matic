@@ -6,11 +6,11 @@
     <p>Are you required to collect any information by law?</p>
 
     <p>
-      {{input type="checkbox"}}
-      <label>No</label>
+      {{input type="checkbox" checked=notRequiredByLaw id="notRequiredByLaw"}}
+      <label for="notRequiredByLaw">No</label>
       <br />
-      {{input type="checkbox"}}
-      <label>Yes</label>
+      {{input type="checkbox" checked=model.statement.requiredByLaw id="requiredByLaw"}}
+      <label for="requiredByLaw">Yes</label>
     </p>
 
     {{#link-to "steps.step" 8 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
