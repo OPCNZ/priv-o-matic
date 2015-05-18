@@ -4,20 +4,20 @@
 
     <ul class="non-bullet-list">
         <li>
-          {{input type="checkbox" name="userDataSource" checked=model.statement.userDataSource}}
-          <label>Our users themselves</label>
+          {{input type="checkbox" id="userDataSource" checked=model.statement.userDataSource}}
+          <label for="userDataSource">Our users themselves</label>
         </li>
         <li>
-          {{input type="checkbox" name="publicDataSource" checked=model.statement.publicDataSource}}
-          <label>Public sources of information on our users</label>
+          {{input type="checkbox" id="publicDataSource" checked=model.statement.publicDataSource}}
+          <label for="publicDataSource">Public sources of information on our users</label>
         </li>
         <li>
-          {{input type="checkbox" name="thirdPartyDataSource" checked=model.statement.thirdPartyDataSource}}
-          <label>3rd parties (a credit agency for instance)</label>
+          {{input type="checkbox" id="thirdPartyDataSource" checked=model.statement.thirdPartyDataSource}}
+          <label for="thirdPartyDataSource">3rd parties (a credit agency for instance)</label>
         </li>
         <li>
-          {{input type="checkbox" name="model.statement.otherDataSource" checked=model.statement.otherDataSource}}
-          <label>Other</label>
+          {{input type="checkbox" id="otherDataSource" checked=model.statement.otherDataSource}}
+          <label for="otherDataSource">Other</label>
             {{#if model.statement.otherDataSource}}
               {{textarea value=model.statement.otherDataSourceInfo cols="80" rows="6"}}
             {{/if}}
@@ -37,7 +37,7 @@
 
     <div id="third-party-source" class="_hidden">
       <p>
-        In most cases you’ll need to ask permission to do this. 
+        In most cases you’ll need to ask permission to do this.
         See
         <a href="https://privacy.org.nz/how-to-comply/getting-started/purpose/#collection">Fair Collection</a>
         or
