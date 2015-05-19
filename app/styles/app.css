@@ -91,6 +91,24 @@ input[type="radio"]    + label  {
   display: none;
 }
 
+/* ---- layer-2/modules/completed-steps ---- */
+
+.step-list {
+  text-align: center;
+}
+
+.step-list .step-marker {
+  border-radius: 50%;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 1px solid black;
+}
+
+.step-list .step-marker a {
+  display: none;
+}
+
 /* ---- layer-2/modules/landing-page ---- */
 
 .p2 {
