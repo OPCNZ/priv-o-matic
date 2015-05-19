@@ -42,13 +42,13 @@
       </li>
     </ul>
 
-    {{#component "modalMessage" showModal=model.statement.noData}}
+    {{#modal-message showModal=model.statement.noData}}
         <p>You don’t need a privacy statement then. No point in filling this out any further.</p>
-    {{/component}}
+    {{/modal-message}}
 
-    {{#component "modalMessage" showModal=showNotReadyMessage}}
+    {{#modal-message showModal=showNotReadyMessage}}
       <p>If you don't collect any data, you don’t need a privacy statement.</p>
-    {{/component}}
+    {{/modal-message}}
 
     <button {{action "nextStep"}} class="pure-button button-blue next-step-button">move along</button>
 
