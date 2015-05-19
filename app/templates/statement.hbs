@@ -1,7 +1,5 @@
 
 
-{{model.id}}
-
 <code>
 <p>
 We collect personal information from you, including information about your
@@ -68,6 +66,15 @@ Providing some information is optional. If you choose not to enter {{model.optio
   {{#each model.extraOptionalInfo as |option|}}
     <li>If you choose not to enter {{option.info}} we'll {{option.consequence}}</li>
   {{/each}}
+{{/if}}
+
+{{#if model.secureMethodOne}}
+  <p>
+  We keep user information safe by  {{model.secureMethodOne}}
+  {{#if model.secureMethodTwo}}
+    and {{model.secureMethodTwo}}.
+  {{/if}}
+  </p>
 {{/if}}
 
 <p>
