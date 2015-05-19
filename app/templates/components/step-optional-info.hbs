@@ -13,19 +13,19 @@
 
 
 
-    {{#each optionalData in model.statement.optionalData}}
+    {{#each option in model.statement.extraOptionalInfo}}
       <div>
         <p>
           If they choose not to enter
-          <span class="text-input">{{input type="text" value="a certain type of information"}}</span>,
+          <span class="text-input">{{input type="text" value=option.info placeholder="a certain type of information"}}</span>,
           we'll
-          <span class="text-input">{{input type="text" value="be unable to provide specific services"}}</span>
+          <span class="text-input">{{input type="text" value=option.consequence placeholder="be unable to provide specific services"}}</span>
         </p>
       </div>
     {{/each}}
 
     <p>
-      <button type="button" class="pure-button button-black-on-white button-small">we have more optional data</button>
+      <button {{action "addOptionalInfo"}} class="pure-button button-black-on-white button-small">we have more optional data</button>
     </p>
 
     {{yield}}

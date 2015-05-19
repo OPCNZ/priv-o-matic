@@ -66,6 +66,7 @@ Step.reopenClass({
   },
   {
     id: 10,
+    statement: 1,
     title: 'Retention',
     name: "step-retention",
     nextStep: 8
