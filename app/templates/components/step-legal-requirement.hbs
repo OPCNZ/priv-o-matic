@@ -1,4 +1,13 @@
 
+
+  {{#if showModal}}
+  <div>
+      You'll need to place a notice informing the user which laws this information is collected under, and whether supplying this information is voluntary or not.
+      <button {{action "ackModal"}}>i understand</button>
+  </div>
+  {{/if}}
+
+
 <div class="pure-g">
   <div class="pure-u-3-4">
 
@@ -12,7 +21,11 @@
       <label for="requiredByLaw">Yes</label>
     </p>
 
-    {{yield}}
+    {{#if model.statement.requiredByLaw}}
+      <button {{action "showModal"}} class="pure-button button-blue next-step-button">move along</button>
+    {{else}}
+      {{yield}}
+    {{/if}}
 
   </div>
 
