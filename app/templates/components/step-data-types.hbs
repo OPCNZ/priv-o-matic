@@ -56,10 +56,7 @@
 
 
   <div class="pure-u-1-4">
-    <button {{action "toggleHelp"}} type="button" class="pure-button button-black-on-white help-text-button">What should I list?</button>
-
-    {{#if showHelp}}
-        <div id="help-text" class="help-text">
+  {{#component "stepHelp"}}
           <p class="first-help-text-item">
             If there's a reasonable chance information can be used to identify a living person, it's considered &ldquo;Personal Information&rdquo; by New Zealand law (even if no names appear). The information doesn't need to be &ldquo;secret&rdquo; or &ldquo;sensitive&ldquo;—it just needs to be about them.
           </p>
@@ -90,7 +87,6 @@
           <p>
             &hellip; many other things. The types of information that can identify someone can be very broad.
           </p>
-        </div>
-    {{/if}}
+    {{/component}}
   </div>
 </div>
