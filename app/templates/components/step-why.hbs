@@ -8,13 +8,13 @@
 <div class="pure-g">
   <div class="pure-u-3-4">
     <p>
-      We collect this data because we need to {{input value=model.statement.collectionReason placeholder="do something that directly relates to our business"}}
+      We collect this data because we need to <span class="text-input">{{input value=model.statement.collectionReason placeholder="do something that directly relates to our business"}}</span>
     </p>
 
     {{#each model.statement.extraReasons as |_ index|}}
       <p>
         also, we need to
-        {{array-item-input array=model.statement.extraReasons index=index placeholder="do another thing related to our business"}}
+        <span class="text-input">{{array-item-input array=model.statement.extraReasons index=index placeholder="do another thing related to our business"}}</span>
       </p>
     {{/each}}
 

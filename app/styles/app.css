@@ -54,6 +54,7 @@ input[type=checkbox] + label:before {
   margin-top:    1em;
 
   margin-right: 0.6em;
+  margin-left: 1.4em;
   position: relative;
   top: 10px;
 }
@@ -211,6 +212,72 @@ input[type="checkbox"] + label {
 
 }
 
+
+/* ---- layer-2/modules/custom-text-inputs ---- */
+
+.text-input input[type="text"] {
+  border: none;
+}
+
+.text-input {
+  display: inline-block;
+  height: 0.3em;
+  position: relative;
+  top: 0.8em;
+
+  border: 2px solid black;
+  border-top: none;
+  padding: 0 0.2em;
+}
+
+.text-input input {
+  position: relative;
+  bottom: 1.3em;
+
+  font-size: 0.8em;
+}
+
+
+/* ---- layer-2/modules/custom-modal ---- */
+
+.modal-anchor {
+  position: relative;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  right: 1em;
+  margin-top: 16px;
+
+  background: #EEE;
+  opacity: 0.97;
+  filter:alpha(opacity=97); /* For IE8 and earlier */
+  padding: 2em;
+  font-size: 0.8em;
+  color: black;
+}
+
+.modal-close-button {
+  position: absolute;
+  right: 0.2em;
+  top: -0.6em;
+  margin-top: 16px;
+
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 50%;
+
+  color: white;
+  background-color: black;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.2em;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+}
 
 /* ---- layer-2/modules/help-text-area ---- */
 
