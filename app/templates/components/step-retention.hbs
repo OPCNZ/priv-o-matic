@@ -5,9 +5,9 @@
 
     <p>
       We keep user's information for
-      {{input type="text" value="enter timescale here"}},
+      {{input type="text" value=model.statement.dataRetentionTime placeholder="enter timescale here"}},
       at which point we securely destroy it by
-      {{input type="text" value="method of destruction"}}.
+      {{input type="text" value=model.statement.dataDestructionMethod placeholder="method of destruction"}}.
     </p>
 
     {{#link-to "steps.step" 8 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
