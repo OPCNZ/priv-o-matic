@@ -5,9 +5,9 @@
 
     <p>
       We keep user's information for
-      {{input type="text" value=model.statement.dataRetentionTime placeholder="enter timescale here"}},
+      <span class="text-input">{{input type="text" value=model.statement.dataRetentionTime placeholder="enter timescale here"}}</span>,
       at which point we securely destroy it by
-      {{input type="text" value=model.statement.dataDestructionMethod placeholder="method of destruction"}}.
+      <span class="text-input">{{input type="text" value=model.statement.dataDestructionMethod placeholder="method of destruction"}}</span>.
     </p>
 
     {{yield}}

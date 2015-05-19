@@ -6,22 +6,22 @@
 
     <p>
       Besides our staff, we share this info with
-      {{input type="text" value=model.statement.thirdPartySharingNameOne placeholder="3rd party"}},
+      <span class="text-input">{{input type="text" value=model.statement.thirdPartySharingNameOne placeholder="3rd party"}}</span>,
       and
-      {{input type="text" value=model.statement.thirdPartySharingNameTwo placeholder="3rd party"}}
+      <span class="text-input">{{input type="text" value=model.statement.thirdPartySharingNameTwo placeholder="3rd party"}}</span>
       in order to
-      {{input type="text" value=model.statement.thirdPartySharingPurpose placeholder="take action connected to the purpose for collection"}}.
+      <span class="text-input">{{input type="text" value=model.statement.thirdPartySharingPurpose placeholder="take action connected to the purpose for collection"}}</span>.
     </p>
 
     {{#each model.statement.sharingParties as |party|}}
       <div>
         <p>
           We also share this info with
-          {{input type="text" value=party.nameOne placeholder="3rd party"}},
+          <span class="text-input">{{input type="text" value=party.nameOne placeholder="3rd party"}}</span>,
           and
-          {{input type="text" value=party.nameTwo placeholder="3rd party"}}
+          <span class="text-input">{{input type="text" value=party.nameTwo placeholder="3rd party"}}</span>
           in order to
-          {{input type="text" value=party.purpose placeholder="take action connected to the purpose for collection"}}.
+          <span class="text-input">{{input type="text" value=party.purpose placeholder="take action connected to the purpose for collection"}}</span>.
         </p>
       </div>
     {{/each}}
