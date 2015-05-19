@@ -7,9 +7,9 @@
 
     <p>
       If our users choose not to enter
-      {{input type="text" value=model.statement.optionalInfo placeholder="certain type of information"}},
+      <span class="text-input">{{input type="text" value=model.statement.optionalInfo placeholder="certain type of information"}}</span>,
       we'll
-      {{input type="text" value=model.statement.optionalConsequence placeholder="be unable to provide specific services"}}
+      <span class="text-input">{{input type="text" value=model.statement.optionalConsequence placeholder="be unable to provide specific services"}}</span>
     </p>
 
 
@@ -18,9 +18,9 @@
       <div>
         <p>
           If they choose not to enter
-          {{input type="text" value="a certain type of information"}},
+          <span class="text-input">{{input type="text" value="a certain type of information"}}</span>,
           we'll
-          {{input type="text" value="be unable to provide specific services"}}
+          <span class="text-input">{{input type="text" value="be unable to provide specific services"}}</span>
         </p>
       </div>
     {{/each}}

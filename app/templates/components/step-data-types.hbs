@@ -42,9 +42,8 @@
     {{#if model.statement.noData}}
       <div class="modal">
         <p>You don’t need a privacy statement then. No point in filling this out any further.</p>
-        <button {{action "acknowledgeNoDataModal"}}>oh, okay then</button>
       </div>
-      <a href="javascript: void(0)" class="modal-close-button">✕</a>
+      <button {{action "acknowledgeNoDataModal"}} class="modal-close-button">✕</button>
     {{/if}}
 
     {{yield}}
