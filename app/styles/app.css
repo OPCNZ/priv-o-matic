@@ -200,6 +200,10 @@ input[type="checkbox"] + label {
   font-size: 125%;
 }
 
+.button-small {
+  font-size: 14px;
+}
+
 
 /* ---- layer-2/modules/custom-lists ---- */
 
