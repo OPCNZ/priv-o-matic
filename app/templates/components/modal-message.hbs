@@ -1,0 +1,7 @@
+
+{{#if showModal}}
+  <div class="modal">
+    {{yield}}
+  </div>
+  <button {{action "closeModal"}} class="modal-close-button">✕</button>
+{{/if}}
