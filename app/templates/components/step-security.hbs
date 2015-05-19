@@ -5,9 +5,9 @@
 
     <p>
       We keep user information safe by
-      {{input type="string" placeholder="storing it in encrypted files" value=model.statement.secureMethodOne}},
+      <span class="text-input">{{input type="text" placeholder="storing it in encrypted files" value=model.statement.secureMethodOne}}</span>,
       and
-      {{input type="string" placeholder="only allowing certain staff to access it" value=model.statement.secureMethodTwo}}.
+      <span class="text-input">{{input type="text" placeholder="only allowing certain staff to access it" value=model.statement.secureMethodTwo}}</span>.
     </p>
 
     {{#link-to "steps.step" 8 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
