@@ -15,10 +15,7 @@
   </div>
 
   <div class="pure-u-1-4">
-    <button {{action "toggleHelp"}} class="pure-button button-black-on-white help-text-button">Why do they need to contact me?</button>
-
-    {{#if showHelp}}
-    <div id="help-text" class="help-text">
+    {{#component "stepHelp"}}
       <p>
         It’s a requirement that users can request and correct any information you hold about them. This includes querying whether you hold information about them at all. This is part of your requirement to take reasonable steps to ensure your information is correct.
       </p>
@@ -31,8 +28,6 @@
         <a href="https://privacy.org.nz/correction-of-personal-information-principle-seven/">Privacy Principle 7</a>
         for more.
       </p>
-
-    </div>
-    {{/if}}
+      {{/component}}
   </div>
 </div>
