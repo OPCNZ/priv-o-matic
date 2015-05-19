@@ -1,7 +1,6 @@
 
 <div class="pure-g">
   <div class="pure-u-3-4">
-    {{yield}}
 
     <p>
       We keep user information safe by
@@ -14,9 +13,7 @@
   </div>
 
   <div class="pure-u-1-4">
-    <button {{action "toggleHelp"}} class="pure-button button-black-on-white help-text-button">Is this necessary?</button>
-    {{#if showHelp}}
-    <div id="help-text" class="help-text">
+    {{#step-help}}
       <p>
         You're required to protect the information from becoming public, or being accessed without authorisation, and to safeguard it from being lost.
       </p>
@@ -26,9 +23,7 @@
         <a href="https://privacy.org.nz/storage-and-security-of-personal-information-principle-five/">Privacy Principle 5</a>
         for more.
       </p>
-
-    </div>
-    {{/if}}
+    {{/step-help}}
   </div>
 </div>
 

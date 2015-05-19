@@ -24,7 +24,7 @@
     </ul>
 
     {{#if model.statement.otherDataSource}}
-      <div class="modal">
+      {{#modal-message showModal=showOtherDataModal}}
         <p>
           In most cases you’ll need to get info directly from the user.
           See
@@ -33,12 +33,11 @@
           <a href="https://privacy.org.nz/the-privacy-act-and-codes/privacy-principles/source-of-personal-information-principle-two/">Privacy Principle 2</a>
           for more.
         </p>
-      </div>
-      <button {{action "acknowledgeNoDataModal"}} class="modal-close-button">✕</button>
+      {{/modal-message}}
     {{/if}}
 
     {{#if model.statement.thirdPartyDataSource}}
-      <div class="modal">
+      {{#modal-message showModal=showThirdPartyDataModal}}
         <p>
           In most cases you’ll need to ask permission to do this.
           See
@@ -47,18 +46,14 @@
           <a href="https://privacy.org.nz/the-privacy-act-and-codes/privacy-principles/source-of-personal-information-principle-two/">Privacy Principle 2</a>
           for more.
         </p>
-      </div>
-      <button {{action "acknowledgeNoDataModal"}} class="modal-close-button">✕</button>
+      {{/modal-message}}
     {{/if}}
 
     {{yield}}
 
   </div>
-
   <div class="pure-u-1-4">
-    <button type="button" class="pure-button button-black-on-white help-text-button" onclick="$('#help-text').toggle()">Why does this matter?</button>
-
-    <div id="help-text" class="help-text _hidden">
+  {{#step-help}}
       <p>
         When collecting information it's almost always best to get it directly from the user. By knowing what information you have and what you're doing with it, users are far less likely to be surprised or upset.
       </p>
@@ -71,6 +66,6 @@
         for more.
       </p>
 
-    </div>
+  {{/step-help}}
   </div>
 </div>
