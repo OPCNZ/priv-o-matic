@@ -14,7 +14,7 @@
     {{#each model.statement.extraReasons as |_ index|}}
       <p>
         also, we need to
-        {{array-item-input array=model.statement.extraReasons index=index placeholder="do another thing related to our business"}}
+        <span class="text-input">{{array-item-input array=model.statement.extraReasons index=index placeholder="do another thing related to our business"}}</span>
       </p>
     {{/each}}
 
