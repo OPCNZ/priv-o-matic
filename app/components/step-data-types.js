@@ -2,14 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-    toggleHelp: function () {
-      this.toggleProperty('showHelp');
-    },
-    acknowledgeNoDataModal: function () {
-      this.model.set('statement.noData', false);
-      this.set('showNotReadyMessage', false);
-    },
-
     nextStep: function () {
       //check is we are ready to move forward
       if (this.isReady()) {
