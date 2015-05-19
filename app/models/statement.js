@@ -30,6 +30,9 @@ let Statement = DS.Model.extend({
     //Sharing
     sharingParties: Ember.A(),
 
+    //Optional Info
+    extraOptionalInfo: Ember.A(),
+
 
 });
 

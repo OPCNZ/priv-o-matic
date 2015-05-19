@@ -38,19 +38,42 @@ We collect this data from
 
 <p>
   {{#if model.thirdPartySharingNameOne}}
-    Besides our staff, we share this information with {{model.thirdPartySharingNameOne}}
-      {{#if model.thirdPartySharingNameTwo}}
-        and {{model.thirdPartySharingNameTwo}}
-      {{/if}}
-    in order to {{model.thirdPartySharingPurpose}}.
+    Besides our staff, we share this information with:
+    <ul>
+      <li>
+      {{model.thirdPartySharingNameOne}}
+        {{#if model.thirdPartySharingNameTwo}}
+          and {{model.thirdPartySharingNameTwo}}
+        {{/if}}
+      in order to {{model.thirdPartySharingPurpose}}.
+      </li>
+
+    {{#each model.sharingParties as |party|}}
+      <li>
+        {{party.nameOne}}
+        {{#if party.nameTwo}}
+          and {{party.nameTwo}}
+        {{/if}}
+        in order to {{party.purpose}}
+      </li>
+    {{/each}}
+    </ul>
   {{/if}}
 </p>
 
 
+{{#if model.optionalInfo}}
+Providing some information is optional. If you choose not to enter {{model.optionalInfo}}, we'll {{model.optionalConsequence}}.
+
+  {{#each model.extraOptionalInfo as |option|}}
+    <li>If you choose not to enter {{option.info}} we'll {{option.consequence}}</li>
+  {{/each}}
+{{/if}}
+
 <p>
 You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong. If you’d like to ask for a copy of your information, or to have it corrected, please contact us at {{model.emailAddress}}
   {{#if model.phoneNumber}}(or {{model.phoneNumber}}){{/if}}
-  {{#if model.postalAddress}}, or {{postalAddress}}){{/if}}.
+  {{#if model.postalAddress}}, or {{model.postalAddress}}){{/if}}.
 </p>
 </code>
 
