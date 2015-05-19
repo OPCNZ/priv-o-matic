@@ -34,9 +34,7 @@
 
   <div class="pure-u-1-4">
 
-    <button {{action "toggleHelp"}} class="pure-button button-black-on-white help-text-button">That matters?</button>
-    {{#if showHelp}}
-    <div id="help-text" class="help-text">
+      {{#step-help}}
       <p>
         If there are consequences You’re required to inform users of any consequences if all or any of the requested information is not provided
       </p>
@@ -47,8 +45,7 @@
         for more.
       </p>
 
-    </div>
-    {{/if}}
+      {{/step-help}}
   </div>
 
 </div>

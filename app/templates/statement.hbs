@@ -5,28 +5,35 @@
 <code>
 <p>
 We collect personal information from you, including information about your
-  {{#if model.identityData}} identity,{{/if}}
-  {{#if model.locationData}} location, {{/if}}
-  {{#if model.computerNetworkData}}computer/network information, {{/if}}
-  {{#if model.userBehaviourData}} behaviour, {{/if}}
-  {{#if model.financialData}} finances, {{/if}}
-  {{#if model.otherDataInfo}} {{model.otherDataInfo}} {{/if}}.
+<ul>
+  {{#if model.identityData}}<li>identity</li>{{/if}}
+  {{#if model.locationData}}<li>location</li>{{/if}}
+  {{#if model.computerNetworkData}}<li>computer/network</li>{{/if}}
+  {{#if model.userBehaviourData}}<li>behaviour</li>{{/if}}
+  {{#if model.financialData}}<li>finances</li>{{/if}}
+  {{#if model.otherDataInfo}}<li>{{model.otherDataInfo}}</li>{{/if}}
+</ul>
 </p>
 
 <p>
 We collect this data from
-  {{#if model.userDataSource}} the information you give us, {{/if}}
-  {{#if model.publicDataSource}} public sources {{/if}}
-  {{#if model.publicDataSource}} third parties, {{/if}}
-  {{#if model.otherSourceInfo}} {{model.otherSourceInfo}} {{/if}}
+<ul>
+  {{#if model.userDataSource}}<li>the information you give us</li>{{/if}}
+  {{#if model.publicDataSource}}<li>public sources</li>{{/if}}
+  {{#if model.thirdPartyDataSource}}<li>third parties</li>{{/if}}
+  {{#if model.otherDataSourceInfo}}<li>{{model.otherDataSourceInfo}}</li>{{/if}}
+</ul>
 </p>
 
 
 <p>
-  We collect this data because we need to {{model.collectionReason}}.
+  We collect this data because we need to:
+  <ul>
+  <li>{{model.collectionReason}}</li>
   {{#each model.extraReasons as |reason|}}
-    also, we need to {{reason}}.
+    <li>{{reason}}</li>
   {{/each}}
+  </ul>
 </p>
 
 <p>
