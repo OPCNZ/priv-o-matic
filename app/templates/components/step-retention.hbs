@@ -1,22 +1,24 @@
 
 <div class="pure-g">
   <div class="pure-u-3-4">
-    {{yield}}
+
 
     <p>
       We keep user's information for
-      <span class="text-input">{{input type="text" value="enter timescale here"}}</span>,
+      <span class="text-input">{{input type="text" value=model.statement.dataRetentionTime placeholder="enter timescale here"}}</span>,
       at which point we securely destroy it by
-      <span class="text-input">{{input type="text" value="method of destruction"}}</span>.
+      <span class="text-input">{{input type="text" value=model.statement.dataDestructionMethod placeholder="method of destruction"}}</span>.
     </p>
 
-    {{#link-to "steps.step" 8 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
+    {{yield}}
+
   </div>
 
   <div class="pure-u-1-4">
-    <button type="button" class="pure-button button-black-on-white help-text-button" onclick="$('#help-text').toggle()">How long can we keep info?</button>
+    <button {{action "toggleHelp"}} class="pure-button button-black-on-white help-text-button">How long can we keep info?</button>
 
-    <div id="help-text" class="help-text _hidden">
+    {{#if showHelp}}
+    <div id="help-text" class="help-text">
       <p>You shouldn't keep information for longer than is necessary for it's purpose.</p>
 
       <p>
@@ -26,5 +28,6 @@
       </p>
 
     </div>
+    {{/if}}
   </div>
 </div>
