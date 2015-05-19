@@ -5,5 +5,6 @@ export default Ember.Component.extend({
         toggleHelp: function () {
             this.toggleProperty('showHelp');
         }
-    }
+    },
+    buttonText: "Why does this matter?"
 });
