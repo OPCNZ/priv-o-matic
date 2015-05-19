@@ -5,10 +5,10 @@
     <p>Are you required to collect any information by law?</p>
 
     <p>
-      {{input type="checkbox" checked=notRequiredByLaw id="notRequiredByLaw"}}
+      {{radio-button value=false checked=model.statement.requiredByLaw id="notRequiredByLaw"}}
       <label for="notRequiredByLaw">No</label>
       <br />
-      {{input type="checkbox" checked=model.statement.requiredByLaw id="requiredByLaw"}}
+      {{radio-button value=true checked=model.statement.requiredByLaw id="requiredByLaw"}}
       <label for="requiredByLaw">Yes</label>
     </p>
 
