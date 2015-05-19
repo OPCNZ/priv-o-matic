@@ -68,7 +68,6 @@ Step.reopenClass({
     id: 10,
     title: 'Retention',
     name: "step-retention",
-    isCompleted: false,
     nextStep: 8
   },
   ]
