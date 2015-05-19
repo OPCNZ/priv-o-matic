@@ -1,7 +1,7 @@
 
 <div class="pure-g">
   <div class="pure-u-3-4">
-    {{yield}}
+
 
     <p>
       We keep user's information for
@@ -10,7 +10,8 @@
       {{input type="text" value=model.statement.dataDestructionMethod placeholder="method of destruction"}}.
     </p>
 
-    {{#link-to "steps.step" 8 classNames="pure-button button-blue next-step-button"}}move along{{/link-to}}
+    {{yield}}
+
   </div>
 
   <div class="pure-u-1-4">
