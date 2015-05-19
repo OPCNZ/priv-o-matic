@@ -1,12 +1,8 @@
 {{outlet}}
 
 <ul id="step-list">
-  <span>
-    {{link-to 'SP' 'index' }}
-  </span>
-
   {{#each step in model}}
-      <span {{bind-attr class="step.isComplete:completed step.current:current"}}>
+      <span {{bind-attr class="step.isCompleted:completed"}}>
       	{{#link-to 'steps.step' step}}{{step.id}}{{/link-to}}
       </span>
   {{/each}}
