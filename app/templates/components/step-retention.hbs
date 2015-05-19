@@ -15,10 +15,7 @@
   </div>
 
   <div class="pure-u-1-4">
-    <button {{action "toggleHelp"}} class="pure-button button-black-on-white help-text-button">How long can we keep info?</button>
-
-    {{#if showHelp}}
-    <div id="help-text" class="help-text">
+    {{#component "stepHelp"}}
       <p>You shouldn't keep information for longer than is necessary for it's purpose.</p>
 
       <p>
@@ -26,8 +23,6 @@
         <a href="https://privacy.org.nz/agency-not-to-keep-personal-information-for-longer-than-necessary-principle-nine/">Privacy Principle 9</a>
         for more.
       </p>
-
-    </div>
-    {{/if}}
+    {{/component}}
   </div>
 </div>
