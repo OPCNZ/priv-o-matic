@@ -17,16 +17,17 @@ export default Ember.Component.extend({
     /**
     Check if our form is filled out
     */
-
     //if any of this array is true, then we're ready to move forward
     var options = ['identityData', 'locationData', 'userBehaviourData', 'computerNetworkData', 'financialData', 'otherData'];
-    for (var i = options.length - 1; i >= 0; i--) {
-      if (this.get('model.statement.' + options[i])) {
+    var self = this;
+
+    return options.any(function(option) {
+      if (self.get('model.statement.' + option)) {
         return true;
       }
-    }
-    return false;
+    });
   }
 
 
 });
+
