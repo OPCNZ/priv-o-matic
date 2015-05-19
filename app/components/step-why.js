@@ -6,10 +6,6 @@ export default Ember.Component.extend({
       var reasons = this.get('model.statement.extraReasons');
       reasons.pushObject('');
     },
-    toggleHelp: function () {
-      console.log("showing help")
-      this.toggleProperty('showHelp');
-    },
     notReady: function() {
       /**
         We're not ready to "move along" so pop up the modal instead
