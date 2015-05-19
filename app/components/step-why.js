@@ -11,9 +11,6 @@ export default Ember.Component.extend({
         We're not ready to "move along" so pop up the modal instead
       */
       this.set('showNotReadyModal', true);
-    },
-    ackMessage: function () {
-      this.set('showNotReadyModal', false);
     }
   },
   readyToMoveOn: function () {
