@@ -35,10 +35,7 @@
   </div>
 
   <div class="pure-u-1-4">
-    <button {{action "toggleHelp"}} type="button" class="pure-button button-black-on-white help-text-button">Is that a problem?</button>
-
-    {{#if showHelp}}
-        <div id="help-text" class="help-text">
+    {{#step-help}}
             <p>
               You need to have a valid reason to share information with outside parties, related to your purpose for collecting it. This doesn’t apply if you gathered the information from a public source, or you have asked the user’s permissions.
             </p>
@@ -48,8 +45,6 @@
               and <a href="https://privacy.org.nz/limits-on-disclosure-of-personal-information-principle-eleven/#collection">Privacy Principle 11</a>
               for more.
             </p>
-
-        </div>
-    {{/if}}
+    {{/step-help}}
   </div>
 </div>
