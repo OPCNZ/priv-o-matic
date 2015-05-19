@@ -38,11 +38,26 @@ We collect this data from
 
 <p>
   {{#if model.thirdPartySharingNameOne}}
-    Besides our staff, we share this information with {{model.thirdPartySharingNameOne}}
-      {{#if model.thirdPartySharingNameTwo}}
-        and {{model.thirdPartySharingNameTwo}}
-      {{/if}}
-    in order to {{model.thirdPartySharingPurpose}}.
+    Besides our staff, we share this information with:
+    <ul>
+      <li>
+      {{model.thirdPartySharingNameOne}}
+        {{#if model.thirdPartySharingNameTwo}}
+          and {{model.thirdPartySharingNameTwo}}
+        {{/if}}
+      in order to {{model.thirdPartySharingPurpose}}.
+      </li>
+
+    {{#each model.sharingParties as |party|}}
+      <li>
+        {{party.nameOne}}
+        {{#if party.nameTwo}}
+          and {{party.nameTwo}}
+        {{/if}}
+        in order to {{party.purpose}}
+      </li>
+    {{/each}}
+    </ul>
   {{/if}}
 </p>
 
