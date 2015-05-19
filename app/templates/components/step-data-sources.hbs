@@ -24,7 +24,7 @@
     </ul>
 
     {{#if model.statement.otherDataSource}}
-      <div class="modal">
+      {{#modal-message showModal=showOtherDataModal}}
         <p>
           In most cases you’ll need to get info directly from the user.
           See
@@ -33,12 +33,11 @@
           <a href="https://privacy.org.nz/the-privacy-act-and-codes/privacy-principles/source-of-personal-information-principle-two/">Privacy Principle 2</a>
           for more.
         </p>
-      </div>
-      <button {{action "acknowledgeNoDataModal"}} class="modal-close-button">✕</button>
+      {{/modal-message}}
     {{/if}}
 
     {{#if model.statement.thirdPartyDataSource}}
-      <div class="modal">
+      {{#modal-message showModal=showThirdPartyDataModal}}
         <p>
           In most cases you’ll need to ask permission to do this.
           See
@@ -47,8 +46,7 @@
           <a href="https://privacy.org.nz/the-privacy-act-and-codes/privacy-principles/source-of-personal-information-principle-two/">Privacy Principle 2</a>
           for more.
         </p>
-      </div>
-      <button {{action "acknowledgeNoDataModal"}} class="modal-close-button">✕</button>
+      {{/modal-message}}
     {{/if}}
 
     {{yield}}
