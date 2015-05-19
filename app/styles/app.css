@@ -276,6 +276,7 @@ input[type="checkbox"] + label {
   line-height: 1.2em;
   text-align: center;
   text-decoration: none;
+  border: none;
 }
 
 /* ---- layer-2/modules/help-text-area ---- */
