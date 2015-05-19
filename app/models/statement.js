@@ -33,6 +33,9 @@ let Statement = DS.Model.extend({
     //Optional Info
     extraOptionalInfo: Ember.A(),
 
+    //Retention
+    dataRetentionTime: DS.attr('string'),
+    dataDestructionMethod: DS.attr('string'),
 
 });
 
