@@ -5,12 +5,13 @@ var Step = DS.Model.extend({
   title: DS.attr('string'),
   name: DS.attr('string'), //how we find our component
   isCompleted: DS.attr('boolean', {defaultValue: false}),
+  nextStep: DS.attr()
 });
 
 
 Step.reopenClass({
   FIXTURES: [
-  {  id: 1, 
+  {  id: 1,
     statement: 1,
     title: 'Information',
     name: 'step-data-types'
@@ -60,13 +61,14 @@ Step.reopenClass({
     id: 9,
     statement: 1,
     title: 'Security',
-    name: "step-security"
+    name: "step-security",
+    nextStep: 8
   },
   {
     id: 10,
     title: 'Retention',
     name: "step-retention",
-    isCompleted: false,
+    nextStep: 8
   },
   ]
 });
