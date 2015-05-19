@@ -1,12 +1,8 @@
-  {{#if showNotReadyModal}}
-  <div>
-      You must state all purposes.
-      <button {{action "ackMessage"}}>i understand</button>
-  </div>
-  {{/if}}
+
+
 
 <div class="pure-g">
-  <div class="pure-u-3-4">
+  <div class="pure-u-3-4 modal-anchor">
     <p>
       We collect this data because we need to <span class="text-input">{{input value=model.statement.collectionReason placeholder="do something that directly relates to our business"}}</span>
     </p>
@@ -28,9 +24,6 @@
     </p>
 
 
-
-
-
     <ul class="non-bullet-list">
       <li>
         {{radio-button value=true checked=model.statement.onlyTheseReasons id="onlyTheseReasons"}}
@@ -48,6 +41,11 @@
     {{else}}
         <button {{action "notReady"}} class="pure-button button-blue next-step-button">move along</button>
     {{/if}}
+
+    {{#modal-message showModal=showNotReadyModal}}
+        <p>You must state all purposes.</p>
+    {{/modal-message}}
+
   </div>
 
   <div class="pure-u-1-4">
