@@ -1,6 +1,6 @@
 
 <h2 class="step-heading">{{model.title}}</h2>
 
-{{#component model.name model=model}}
+{{#component model.name model=model action="nextStep"}}
   <button {{action "nextStep"}} class="pure-button button-blue next-step-button">move along</button>
 {{/component}}
