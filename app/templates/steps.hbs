@@ -5,7 +5,9 @@
 
       {{#if step.showInNav}}
       <span {{bind-attr class="step.isCompleted:completed :step-marker"}}>
-      	{{#link-to 'steps.step' step}}{{step.id}}{{/link-to}}
+        {{#if step.isCompleted}}
+      	   {{#link-to 'steps.step' step}}{{step.id}}{{/link-to}}
+         {{/if}}
       </span>
       {{/if}}
   {{/each}}
