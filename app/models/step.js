@@ -5,7 +5,8 @@ var Step = DS.Model.extend({
   title: DS.attr('string'),
   name: DS.attr('string'), //how we find our component
   isCompleted: DS.attr('boolean', {defaultValue: false}),
-  nextStep: DS.attr()
+  nextStep: DS.attr(),
+  showInNav: DS.attr('boolean', {defaultValue: true})
 });
 
 
@@ -62,14 +63,16 @@ Step.reopenClass({
     statement: 1,
     title: 'Security',
     name: "step-security",
-    nextStep: 8
+    nextStep: 8,
+    showInNav: false,
   },
   {
     id: 10,
     statement: 1,
     title: 'Retention',
     name: "step-retention",
-    nextStep: 8
+    nextStep: 8,
+    showInNav: false,
   },
   ]
 });
