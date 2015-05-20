@@ -8,7 +8,7 @@ export default Ember.Component.extend({
         this.sendAction();
       }
       else {
-        //we're not ready, so show the model message
+        //we're not ready, so show the modal-message
         this.set('showNotReadyMessage', true);
       }
     }
