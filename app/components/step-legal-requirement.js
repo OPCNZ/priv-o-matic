@@ -5,9 +5,5 @@ export default Ember.Component.extend({
         showModal: function() {
             this.set('showModal', true);
         },
-        ackModal: function() {
-            this.set('showModal', false);
-        }
-
     }
 });
