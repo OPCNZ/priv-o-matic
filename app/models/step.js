@@ -18,19 +18,19 @@ Step.reopenClass({
   },
   {  id: 2,
     statement: 1,
-    title: 'We get this data from',
+    title: 'Collection',
     name: 'step-data-sources'
   },
   {
     id: 3,
     statement: 1,
-    title: 'Why do you need that information?',
+    title: 'Purpose',
     name: 'step-why'
   },
   {
     id: 4,
     statement: 1,
-    title: 'Who do you share with and why?',
+    title: 'Sharing',
     name: 'step-sharing'
   },
   {
@@ -42,7 +42,7 @@ Step.reopenClass({
   {
     id: 6,
     statement: 1,
-    title: 'Optional Information',
+    title: 'Optional Info',
     name: "step-optional-info"
   },
   {
