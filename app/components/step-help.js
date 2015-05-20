@@ -6,5 +6,6 @@ export default Ember.Component.extend({
             this.toggleProperty('showHelp');
         }
     },
+    //default text, if none provided.
     buttonText: "Why does this matter?"
 });
