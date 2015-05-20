@@ -1,5 +1,8 @@
 <div class="pure-g">
   <div class="pure-u-3-4 modal-anchor">
+
+
+
     <p>We collect the following types of data about our users:</p>
 
     <ul class="pure-g non-bullet-list">
@@ -47,12 +50,13 @@
       </li>
     </ul>
 
-    {{#if model.statement.noData}}
-      <div class="modal">
+    {{#modal-message showModal=model.statement.noData}}
         <p>You don’t need a privacy statement then. No point in filling this out any further.</p>
-      </div>
-      <button {{action "acknowledgeNoDataModal"}} class="modal-close-button">✕</button>
-    {{/if}}
+    {{/modal-message}}
+
+    {{#modal-message showModal=showNotReadyMessage}}
+      <p>If you don't collect any data, you don’t need a privacy statement.</p>
+    {{/modal-message}}
 
     {{#if model.statement.uniqueId}}
       <div class="modal">
@@ -67,11 +71,13 @@
       <button {{action "acknowledgeUniqueIdModal"}} class="modal-close-button">✕</button>
     {{/if}}
 
+    <button {{action "nextStep"}} class="pure-button button-blue next-step-button">move along</button>
+
   </div>
 
 
   <div class="pure-u-1-4">
-  {{#step-help}}
+  {{#step-help buttonText="What should I list?"}}
           <p class="first-help-text-item">
             If there's a reasonable chance information can be used to identify a living person, it's considered &ldquo;Personal Information&rdquo; by New Zealand law (even if no names appear). The information doesn't need to be &ldquo;secret&rdquo; or &ldquo;sensitive&ldquo;—it just needs to be about them.
           </p>

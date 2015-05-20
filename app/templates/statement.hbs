@@ -1,10 +1,8 @@
 
 
-{{model.id}}
-
 <code>
 <p>
-We collect personal information from you, including information about your
+We collect personal information from you, including information about your:
 <ul>
   {{#if model.identityData}}<li>identity</li>{{/if}}
   {{#if model.locationData}}<li>location</li>{{/if}}
@@ -16,7 +14,7 @@ We collect personal information from you, including information about your
 </p>
 
 <p>
-We collect this data from
+We collect this data from:
 <ul>
   {{#if model.userDataSource}}<li>the information you give us</li>{{/if}}
   {{#if model.publicDataSource}}<li>public sources</li>{{/if}}
@@ -68,6 +66,22 @@ Providing some information is optional. If you choose not to enter {{model.optio
   {{#each model.extraOptionalInfo as |option|}}
     <li>If you choose not to enter {{option.info}} we'll {{option.consequence}}</li>
   {{/each}}
+{{/if}}
+
+{{#if model.secureMethodOne}}
+  <p>
+  We keep user information safe by  {{model.secureMethodOne}}
+  {{#if model.secureMethodTwo}}
+    and {{model.secureMethodTwo}}.
+  {{/if}}
+  </p>
+{{/if}}
+
+{{#if model.dataRetentionTime}}
+    We keep your information for
+    {{model.dataRetentionTime}}
+      at which point we securely destroy it by
+      {{model.dataDestructionMethod}}.
 {{/if}}
 
 <p>
