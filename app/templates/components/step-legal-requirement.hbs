@@ -6,7 +6,7 @@
 <div class="pure-g">
   <div class="pure-u-3-4 modal-anchor">
 
-    <p>Are you required to collect any information by law?</p>
+    <p>Are you required to collect any of this information by law?</p>
 
     <p>
       {{radio-button value=false checked=model.statement.requiredByLaw id="notRequiredByLaw"}}
@@ -24,15 +24,6 @@
 
     {{#modal-message showModal=showModal}}
       <p>
-        You'll need to place a notice informing the user which laws this information is collected under, and whether supplying this information is voluntary or not.
-      </p>
-    {{/modal-message}}
-
-  </div>
-
-  <div class="pure-u-1-4">
-    {{#step-help}}
-      <p>
         You’ll need to place a notice informing the user which laws this information is collected under, and whether supplying this information is voluntary or not.
       </p>
 
@@ -41,8 +32,11 @@
         <a href="https://privacy.org.nz/collection-of-information-from-subject-principle-three/">Privacy Principle 3</a>
         for more.
       </p>
+    {{/modal-message}}
 
-    {{/step-help}}
+  </div>
+
+  <div class="pure-u-1-4">
   </div>
 </div>
 
