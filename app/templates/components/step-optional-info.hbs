@@ -2,11 +2,11 @@
 <div class="pure-g">
   <div class="pure-u-3-4">
 
-    <p>Sometimes information is optional, and will limit the kinds of services provided. </p>
+    <p>Sometimes supplying information is optional, but might limit the kinds of services provided.</p>
 
     <p>
-      If our users choose not to enter
-      <span class="text-input">{{input type="text" value=model.statement.optionalInfo placeholder="certain type of information"}}</span>,
+      If our users choose not to give us
+      <span class="text-input">{{input type="text" value=model.statement.optionalInfo placeholder="a certain type of information"}}</span>,
       we'll
       <span class="text-input">{{input type="text" value=model.statement.optionalConsequence placeholder="be unable to provide specific services"}}</span>
     </p>
@@ -16,7 +16,7 @@
     {{#each option in model.statement.extraOptionalInfo}}
       <div>
         <p>
-          If they choose not to enter
+          If they choose not to give us
           <span class="text-input">{{input type="text" value=option.info placeholder="a certain type of information"}}</span>,
           we'll
           <span class="text-input">{{input type="text" value=option.consequence placeholder="be unable to provide specific services"}}</span>
@@ -25,7 +25,7 @@
     {{/each}}
 
     <p>
-      <button {{action "addOptionalInfo"}} class="pure-button button-black-on-white button-small">we have more optional data</button>
+      <button {{action "addOptionalInfo"}} class="pure-button button-black-on-white button-small">we have more optional info</button>
     </p>
 
     {{yield}}
@@ -36,7 +36,7 @@
 
       {{#step-help}}
       <p>
-        If there are consequences You’re required to inform users of any consequences if all or any of the requested information is not provided
+        You're required to inform users of any consequences if all or any of the requested information is not provided.
       </p>
 
       <p>
