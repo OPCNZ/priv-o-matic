@@ -49,7 +49,20 @@
       {{/modal-message}}
     {{/if}}
 
-    {{yield}}
+    {{#modal-message showModal=showNotReadyMessage}}
+      <p>All information has a source. Explain where you got these from:
+        <ul>
+            {{#if model.statement.identityData}}<li>identity</li>{{/if}}
+            {{#if model.statement.locationData}}<li>location</li>{{/if}}
+            {{#if model.statement.computerNetworkData}}<li>computer/network</li>{{/if}}
+            {{#if model.statement.userBehaviourData}}<li>behaviour</li>{{/if}}
+            {{#if model.statement.financialData}}<li>finances</li>{{/if}}
+            {{#if model.statement.otherDataInfo}}<li>{{model.otherDataInfo}}</li>{{/if}}
+        </ul>
+      </p>
+    {{/modal-message}}
+
+    <button {{action "nextStep"}} class="pure-button button-blue next-step-button">move along</button>
 
   </div>
   <div class="pure-u-1-4">
