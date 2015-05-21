@@ -15,12 +15,20 @@
         <label for="locationData">Location</label>
       </li>
       <li class="pure-u-1-2">
+        {{input type="checkbox" id="addressData" checked=model.statement.addressData}}
+        <label for="addressData">Address</label>
+      </li>
+      <li class="pure-u-1-2">
         {{input type="checkbox" id="userBehaviourData" checked=model.statement.userBehaviourData}}
         <label for="userBehaviourData">User Behaviour</label>
       </li>
       <li class="pure-u-1-2">
         {{input type="checkbox" id="computerNetworkData" checked=model.statement.computerNetworkData}}
         <label for="computerNetworkData">Computer/Network</label>
+      </li>
+      <li class="pure-u-1-2">
+        {{input type="checkbox" id="uniqueIdData" checked=model.statement.uniqueId}}
+        <label for="uniqueId">Unique Identifiers</label>
       </li>
       <li class="pure-u-1-2">
         {{input type="checkbox" id="financialData" checked=model.statement.financialData}}
@@ -50,6 +58,19 @@
       <p>If you don't collect any data, you don’t need a privacy statement.</p>
     {{/modal-message}}
 
+    {{#if model.statement.uniqueId}}
+      <div class="modal">
+        <p>
+          You need to be careful collecting these&mdash;you can't ask for unique identifiers unless your purpose for collection is linked to the reason the identifier was assigned.
+        </p>
+        <p>
+          See
+          <a href="https://privacy.org.nz/the-privacy-act-and-codes/privacy-principles/unique-identifiers-principle-twelve/" target="_blank">Privacy Principle 12</a> for more.
+        </p>
+      </div>
+      <button {{action "acknowledgeUniqueIdModal"}} class="modal-close-button">✕</button>
+    {{/if}}
+
     <button {{action "nextStep"}} class="pure-button button-blue next-step-button">move along</button>
 
   </div>
@@ -65,11 +86,15 @@
 
           <p>
             <strong>Identity information:</strong> <br />
-            Name, username, email-address,  password, date-of-birth/Age, gender, etc
+            Name, username, email-address,  password, date-of-birth/age, gender, etc
           </p>
           <p>
             <strong>Location information:</strong> <br />
-            GPS Location, physical addresses, etc
+            GPS Location, Latitude/Longitude, etc
+          </p>
+          <p>
+            <strong>Address information:</strong> <br />
+            Postal address, etc
           </p>
           <p>
             <strong>Behavioural information:</strong> <br />
@@ -77,7 +102,12 @@
           </p>
           <p>
             <strong>Computer/Network information:</strong> <br />
-            Browser identifiers/fingerprint, IP address, network information, etc
+            Browser identifiers/fingerprints, IP address, network information, etc
+          </p>
+          <p>
+            <strong>Unique Identifiers:</strong> <br />
+            Officially issued numbers that tie a user to their information (for instance
+            passport and drivers license numbers).
           </p>
           <p>
             <strong>Financial information:</strong> <br />
@@ -85,7 +115,7 @@
           </p>
 
           <p>
-            &hellip; many other things. The types of information that can identify someone can be very broad.
+            &hellip; and many other things. The types of information that can identify someone can be very broad.
           </p>
     {{/step-help}}
   </div>
