@@ -1,11 +1,6 @@
 <div class="pure-g">
   <div class="pure-u-3-4 modal-anchor">
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> blah/master
     <p>We collect the following types of data about our users:</p>
 
     <ul class="pure-g non-bullet-list">
@@ -54,17 +49,6 @@
     </ul>
 
     {{#modal-message showModal=model.statement.noData}}
-<<<<<<< HEAD
-        <p>You don’t need a privacy statement then. No point in filling this out any further.</p>
-    {{/modal-message}}
-
-    {{#modal-message showModal=showNotReadyMessage}}
-      <p>If you don't collect any data, you don’t need a privacy statement.</p>
-    {{/modal-message}}
-
-    {{#if model.statement.uniqueId}}
-      <div class="modal">
-=======
         <p>If you don't collect any data, you don’t need a privacy statement. No point in filling this out any further.</p>
     {{/modal-message}}
 
@@ -73,7 +57,6 @@
     {{/modal-message}}
 
     {{#modal-message showModal=model.statement.uniqueId}}
->>>>>>> blah/master
         <p>
           You need to be careful collecting these&mdash;you can't ask for unique identifiers unless your purpose for collection is linked to the reason the identifier was assigned.
         </p>
@@ -81,13 +64,7 @@
           See
           <a href="https://privacy.org.nz/the-privacy-act-and-codes/privacy-principles/unique-identifiers-principle-twelve/" target="_blank">Privacy Principle 12</a> for more.
         </p>
-<<<<<<< HEAD
-      </div>
-      <button {{action "acknowledgeUniqueIdModal"}} class="modal-close-button">✕</button>
-    {{/if}}
-=======
     {{/modal-message}}
->>>>>>> blah/master
 
     <button {{action "nextStep"}} class="pure-button button-blue next-step-button">move along</button>
 
