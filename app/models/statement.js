@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 import Ember from 'ember';
 
-let Statement = DS.Model.extend({
+export default DS.Model.extend({
     steps: DS.hasMany('step', {async: true}),
 
 
@@ -22,7 +22,6 @@ let Statement = DS.Model.extend({
     otherDataSource: DS.attr('boolean'),
     otherDataSourceInfo: DS.attr('string'),
 
-
     //why
     extraReasons: Ember.A(),
     onlyTheseReasons: DS.attr('boolean', {default: false}),
@@ -38,12 +37,3 @@ let Statement = DS.Model.extend({
     dataDestructionMethod: DS.attr('string'),
 
 });
-
-Statement.reopenClass({
-  FIXTURES: [{
-    id: 1,
-    businessName: 'Spacely Sprockets'
-  }]
-});
-
-export default Statement;
