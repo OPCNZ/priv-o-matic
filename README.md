@@ -12,7 +12,7 @@ For more info on NZs privacy law requirements see the [Privacy Commissioner's Of
 
 ## License
 
-Copyright (c) 2015 Rabid Technologies Ltd.
+Copyright (c) 2015 Office of the Privacy Commissioner
 
 The intention is to open source this tool, although at this point a license has yet been agreed and it is proprietary software.
 
@@ -63,4 +63,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
