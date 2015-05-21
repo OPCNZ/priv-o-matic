@@ -33,14 +33,14 @@
       </li>
     </ul>
 
-    {{#if model.statement.onlyTheseReasons}}
+    {{#if readyToMoveOn}}
         {{yield}}
     {{else}}
         <button {{action "notReady"}} class="pure-button button-blue next-step-button">move along</button>
     {{/if}}
 
-    {{#if model.statement.onlyTheseReasons}}
-      {{#modal-message showModal=true}}
+
+    {{#modal-message showModal=showUnstatedPurposeModal}}
         <p>
           You're required to have a defined purpose for all the information you collect&mdash;if you can’t tell people why you need the information, it’s better to not collect it.
         </p>
@@ -51,8 +51,7 @@
           <a href="https://privacy.org.nz/purpose-for-collection-of-personal-information-principle-one/" target="_blank">Privacy Principle 1</a>
           for more.
         </p>
-      {{/modal-message}}
-    {{/if}}
+    {{/modal-message}}
 
     {{#modal-message showModal=showNotReadyModal}}
         <p> If you collect information you'll need at least one purpose.</p>

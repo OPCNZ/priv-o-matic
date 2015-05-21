@@ -28,32 +28,33 @@ var stepData =   [
   {
     id: 3,
     statement: 1,
-    title: 'Purpose',
-    name: 'step-why'
+    title: 'Applicable Laws',
+    name: "step-legal-requirement"
   },
   {
     id: 4,
+    statement: 1,
+    title: 'Purpose',
+    name: 'step-why'
+  },
+
+  {
+    id: 5,
     statement: 1,
     title: 'Sharing',
     name: 'step-sharing'
   },
   {
-    id: 5,
+    id: 6,
     statement: 1,
     title: 'Contact',
     name: "step-contact"
   },
   {
-    id: 6,
+    id: 7,
     statement: 1,
     title: 'Optional Info',
     name: "step-optional-info"
-  },
-  {
-    id: 7,
-    statement: 1,
-    title: 'Applicable Laws',
-    name: "step-legal-requirement"
   },
   {
     id: 8,
