@@ -40,18 +40,12 @@ We collect this data from:
     <ul>
       <li>
       {{model.thirdPartySharingNameOne}}
-        {{#if model.thirdPartySharingNameTwo}}
-          and {{model.thirdPartySharingNameTwo}}
-        {{/if}}
       in order to {{model.thirdPartySharingPurpose}}.
       </li>
 
     {{#each model.sharingParties as |party|}}
       <li>
         {{party.nameOne}}
-        {{#if party.nameTwo}}
-          and {{party.nameTwo}}
-        {{/if}}
         in order to {{party.purpose}}
       </li>
     {{/each}}
