@@ -1,4 +1,4 @@
-export function initialize( container, application ) {
+export function initialize( container /*, application*/ ) {
   // application.inject('route', 'foo', 'service:foo');
   let store = container.lookup('store:main');
   store.pushMany('statement', statementData);
