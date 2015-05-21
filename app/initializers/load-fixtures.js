@@ -1,7 +1,7 @@
 export function initialize( container, application ) {
   // application.inject('route', 'foo', 'service:foo');
   let store = container.lookup('store:main');
-  store.pushMany('statement', statementData)
+  store.pushMany('statement', statementData);
   store.pushMany('step', stepData);
 }
 
@@ -15,26 +15,26 @@ var statementData = [{  id: 1 }];
 
 var stepData =   [
   {
-  id: 1,
+    id: 1,
     statement: 1,
     title: 'Information',
     name: 'step-data-types'
   },
   {  id: 2,
     statement: 1,
-    title: 'We get this data from',
+    title: 'Collection',
     name: 'step-data-sources'
   },
   {
     id: 3,
     statement: 1,
-    title: 'Why do you need that information?',
+    title: 'Purpose',
     name: 'step-why'
   },
   {
     id: 4,
     statement: 1,
-    title: 'Who do you share with and why?',
+    title: 'Sharing',
     name: 'step-sharing'
   },
   {
@@ -46,7 +46,7 @@ var stepData =   [
   {
     id: 6,
     statement: 1,
-    title: 'Optional Information',
+    title: 'Optional Info',
     name: "step-optional-info"
   },
   {
