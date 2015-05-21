@@ -8,4 +8,3 @@ export default DS.Model.extend({
   nextStep: DS.attr(),
   showInNav: DS.attr('boolean', {defaultValue: true})
 });
-;

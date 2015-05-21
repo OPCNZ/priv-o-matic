@@ -1,7 +1,7 @@
 export function initialize( container, application ) {
   // application.inject('route', 'foo', 'service:foo');
   let store = container.lookup('store:main');
-  store.pushMany('statement', statementData)
+  store.pushMany('statement', statementData);
   store.pushMany('step', stepData);
 }
 
