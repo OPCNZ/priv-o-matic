@@ -316,6 +316,15 @@ input[type="radio"]    + label  {
   border: none;
 }
 
+
+/* ---- layer-2/modules/non-link-links ---- */
+
+.non-link {
+  text-decoration: none;
+  color: rgb(110, 110, 110);
+}
+
+
 /* ---- layer-2/modules/help-text-area ---- */
 
 .pure-g .help-text {
