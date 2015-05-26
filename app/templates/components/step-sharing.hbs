@@ -3,18 +3,18 @@
   <div class="pure-u-3-4">
     <p>
       Besides our staff, we share this info with
-      <span class="text-input">{{input type="text" value=model.statement.thirdPartySharingNameOne placeholder="3rd parties"}}</span>
+      <span class="text-input">{{input type="text" value=model.statement.thirdPartySharingNameOne placeholder="3rd parties" size="15"}}</span>
       in order to
-      <span class="text-input">{{input type="text" value=model.statement.thirdPartySharingPurpose placeholder="take actions connected to the purpose for collection"}}</span>.
+      <span class="text-input">{{input type="text" value=model.statement.thirdPartySharingPurpose placeholder="take actions connected to a purpose for collection" size="46"}}</span>.
     </p>
 
     {{#each model.statement.sharingParties as |party|}}
       <div>
         <p>
           We also share this info with
-          <span class="text-input">{{input type="text" value=party.nameOne placeholder="3rd parties"}}</span>
+          <span class="text-input">{{input type="text" value=party.nameOne placeholder="3rd parties" size="15"}}</span>
           in order to
-          <span class="text-input">{{input type="text" value=party.purpose placeholder="take actions connected to a purpose for collection"}}</span>.
+          <span class="text-input">{{input type="text" value=party.purpose placeholder="take actions connected to a purpose for collection" size="46"}}</span>.
         </p>
       </div>
     {{/each}}
