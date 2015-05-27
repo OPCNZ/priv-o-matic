@@ -34,10 +34,15 @@
       </li>
       <li class="pure-u-1-2">
         {{input type="checkbox" id="otherData" checked=model.statement.otherData}}
-        <label for="otherData">Other</label>
-        {{#if model.statement.otherData}}
-          {{textarea value=model.statement.otherDataInfo cols="80" rows="6"}}
-        {{/if}}
+
+        {{#unless model.statement.otherData}}
+          <label for="otherData">Other</label>
+        {{else}}
+          <label for="otherData"></label>
+          <span class="text-input">
+            {{input type="text" value=model.statement.otherDataInfo}}
+          </span>
+        {{/unless}}
       </li>
     </ul>
 

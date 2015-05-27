@@ -7,6 +7,8 @@
       <span {{bind-attr class="step.isCompleted:completed :step-marker"}}>
         {{#if step.isCompleted}}
       	   {{#link-to 'steps.step' step}}{{step.id}}{{/link-to}}
+         {{else}}
+           {{#link-to 'steps.step' step disabled=true}}{{step.id}}{{/link-to}}
          {{/if}}
       </span>
       {{/if}}
