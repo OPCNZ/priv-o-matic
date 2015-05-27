@@ -59,7 +59,7 @@ var stepData =   [
   {
     id: 8,
     statement: 1,
-    title: 'Privacy Statement',
+    title: 'All Done',
     name: "step-statement",
   },
   {

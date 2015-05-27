@@ -204,6 +204,19 @@ input[type="radio"]    + label  {
   margin-top: 25px;
 }
 
+/* ---- layer-2/modules/privacy-statement ---- */
+
+.privacy-statement {
+  display: block;
+  font-family: 'Courier New', monospace;
+  font-size: 0.7em;
+  line-height: 1.2em;
+  color: black;
+
+  border-left: 3px solid rgb(110, 110, 110);
+  padding: 0 0.7em;
+  margin: 2.3em 0;
+}
 
 /* ---- layer-2/modules/buttons ---- */
 
@@ -315,6 +328,15 @@ input[type="radio"]    + label  {
   text-decoration: none;
   border: none;
 }
+
+
+/* ---- layer-2/modules/non-link-links ---- */
+
+.non-link {
+  text-decoration: none;
+  color: rgb(110, 110, 110);
+}
+
 
 /* ---- layer-2/modules/help-text-area ---- */
 
