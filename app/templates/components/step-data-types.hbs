@@ -1,36 +1,36 @@
 <div class="pure-g">
   <div class="pure-u-3-4 modal-anchor">
 
-    <p>We collect the following types of data about our users:</p>
+    <p>We collect the following types of personal information:</p>
 
     <ul class="pure-g non-bullet-list">
       <li class="pure-u-1-2">
         {{input type="checkbox" id="identityData" checked=model.statement.identityData}}
-        <label for="identityData">Identity (email/etc)</label>
+        <label for="identityData">Name</label>
       </li>
       <li class="pure-u-1-2">
         {{input type="checkbox" id="locationData" checked=model.statement.locationData}}
-        <label for="locationData">Location</label>
+        <label for="locationData">Location (if mobile)</label>
       </li>
       <li class="pure-u-1-2">
         {{input type="checkbox" id="addressData" checked=model.statement.addressData}}
-        <label for="addressData">Address</label>
+        <label for="addressData">Contact information</label>
       </li>
       <li class="pure-u-1-2">
         {{input type="checkbox" id="userBehaviourData" checked=model.statement.userBehaviourData}}
-        <label for="userBehaviourData">User Behaviour</label>
+        <label for="userBehaviourData">How people interact with us</label>
       </li>
       <li class="pure-u-1-2">
         {{input type="checkbox" id="computerNetworkData" checked=model.statement.computerNetworkData}}
-        <label for="computerNetworkData">Computer/Network</label>
+        <label for="computerNetworkData">Computer/Network (if online)</label>
       </li>
       <li class="pure-u-1-2">
         {{input type="checkbox" id="uniqueIdData" checked=model.statement.uniqueId}}
-        <label for="uniqueIdData">Unique Identifiers</label>
+        <label for="uniqueIdData">Unique identifiers</label>
       </li>
       <li class="pure-u-1-2">
         {{input type="checkbox" id="financialData" checked=model.statement.financialData}}
-        <label for="financialData">Financial</label>
+        <label for="financialData">Billing information</label>
       </li>
       <li class="pure-u-1-2">
         {{input type="checkbox" id="otherData" checked=model.statement.otherData}}
@@ -44,26 +44,25 @@
     <ul class="non-bullet-list">
       <li>
         {{input type="checkbox" id="noData" checked=model.statement.noData }}
-        <label for="noData">We don’t collect any user data</label>
+        <label for="noData">We don’t collect personal information</label>
       </li>
     </ul>
 
     {{#modal-message showModal=model.statement.noData}}
-        <p>If you don't collect any data, you don’t need a privacy statement. No point in filling this out any further.</p>
+        <p>If you don't collect personal information, you don’t need a privacy statement.</p>
     {{/modal-message}}
 
     {{#modal-message showModal=showNotReadyMessage}}
-        <p>If you don't collect any data, you don’t need a privacy statement. No point in filling this out any further.</p>
+        <p>If you don't collect personal information, you don’t need a privacy statement.</p>
     {{/modal-message}}
 
     {{#modal-message showModal=model.statement.uniqueId}}
         <p>
-          You need to be careful collecting these&mdash;you can't ask for unique identifiers unless your purpose for collection is linked to the reason the identifier was assigned.
+          You need to be careful collecting these&mdash;you genrally can't ask for unique identifiers unless you are the agency that originally assigned it. See
+          <a href="https://privacy.org.nz/the-privacy-act-and-codes/privacy-principles/unique-identifiers-principle-twelve/" target="_blank">Privacy Principle 12</a> for more information.
         </p>
         <p>
-          See
-          <a href="https://privacy.org.nz/the-privacy-act-and-codes/privacy-principles/unique-identifiers-principle-twelve/" target="_blank">Privacy Principle 12</a> for more.
-        </p>
+          Cases where unique identifiers are collected are a bit too complex for this tool to automatically create you a statement. If this is the case, feel free to <a href="https://privacy.org.nz/contact-us/" target="_blank">contact us</a> for help.
     {{/modal-message}}
 
     <button {{action "nextStep"}} class="pure-button button-blue next-step-button">move along</button>
@@ -74,30 +73,29 @@
   <div class="pure-u-1-4">
   {{#step-help buttonText="What should I list?"}}
           <p class="first-help-text-item">
-            If there's a reasonable chance information can be used to identify a living person, it's considered &ldquo;Personal Information&rdquo; by New Zealand law (even if no names appear). The information doesn't need to be &ldquo;secret&rdquo; or &ldquo;sensitive&ldquo;—it just needs to be about them.
+            If there's a reasonable chance information can be used to identify a living person, it's considered &ldquo;personal information&rdquo; by New Zealand law (even if no names appear). The information doesn't need to be &ldquo;secret&rdquo; or &ldquo;sensitive&ldquo;—it just needs to be about them.
           </p>
 
           <p>Examples of personal information include,</p>
 
           <p>
-            <strong>Identity information:</strong> <br />
-            Name, username, email-address,  password, date-of-birth/age, gender, etc
+            <strong>Name</strong> <br />
           </p>
           <p>
             <strong>Location information:</strong> <br />
-            GPS Location, Latitude/Longitude, etc
+            GPS Location, Latitude/Longitude, coarse or fine etc
           </p>
           <p>
-            <strong>Address information:</strong> <br />
-            Postal address, etc
+            <strong>Contact information:</strong> <br />
+            Postal address, email address, phone number, Twitter handles etc
           </p>
           <p>
-            <strong>Behavioural information:</strong> <br />
+            <strong>Behavioural or interaction information:</strong> <br />
             Interests, browsing habits, searches, contacts or associates, etc
           </p>
           <p>
             <strong>Computer/Network information:</strong> <br />
-            Browser identifiers/fingerprints, IP address, network information, etc
+            Browser identifiers/fingerprints, IP address, network information, IMEI numbers etc
           </p>
           <p>
             <strong>Unique Identifiers:</strong> <br />
@@ -105,12 +103,12 @@
             passport and drivers license numbers).
           </p>
           <p>
-            <strong>Financial information:</strong> <br />
+            <strong>Billing information:</strong> <br />
             Credit card, purchase history, etc
           </p>
 
           <p>
-            &hellip; and many other things. The types of information that can identify someone can be very broad.
+            &hellip; and many other things. The types of information that can identify someone can be very broad - don't forget about username, password, date of birth, age, gender, etc.
           </p>
     {{/step-help}}
   </div>
