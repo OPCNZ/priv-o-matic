@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'priv-o-matic',
+    modulePrefix: 'smallprint',
     environment: environment,
     baseURL: '/',
     locationType: 'hash',
