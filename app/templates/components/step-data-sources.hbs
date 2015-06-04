@@ -1,19 +1,19 @@
 <div class="pure-g">
   <div class="pure-u-3-4 modal-anchor">
-    <p>We get this data from:</p>
+    <p>We get this personal information by:</p>
 
     <ul class="non-bullet-list">
         <li>
           {{input type="checkbox" id="userDataSource" checked=model.statement.userDataSource}}
-          <label for="userDataSource">Our users themselves</label>
+          <label for="userDataSource">Asking people directly</label>
         </li>
         <li>
           {{input type="checkbox" id="publicDataSource" checked=model.statement.publicDataSource}}
-          <label for="publicDataSource">Public sources of information on our users</label>
+          <label for="publicDataSource">Using public sources of information</label>
         </li>
         <li>
           {{input type="checkbox" id="thirdPartyDataSource" checked=model.statement.thirdPartyDataSource}}
-          <label for="thirdPartyDataSource">3rd parties (a credit agency for instance)</label>
+          <label for="thirdPartyDataSource">Asking third parties (a credit agency for instance)</label>
         </li>
         <li>
           {{input type="checkbox" id="otherDataSource" checked=model.statement.otherDataSource}}
@@ -27,12 +27,14 @@
     {{#if model.statement.otherDataSource}}
       {{#modal-message showModal=showOtherDataModal}}
         <p>
-          In most cases you’ll need to get info directly from the user.
+          In most cases you’ll need to get information directly from the person. Unfotunately situations where information is collected from sources not listed here are out of scope for this tool. If this is the case feel free to <a href="https://privacy.org.nz/contact-us/" target="_blank">contact us</a> for help.
+        </p>
+        <p>
           See
           <a href="https://privacy.org.nz/how-to-comply/getting-started/purpose/#collection" target="_blank">Fair Collection</a>
           or
           <a href="https://privacy.org.nz/the-privacy-act-and-codes/privacy-principles/source-of-personal-information-principle-two/" target="_blank">Privacy Principle 2</a>
-          for more.
+          for more information.
         </p>
       {{/modal-message}}
     {{/if}}
@@ -40,19 +42,22 @@
     {{#if model.statement.thirdPartyDataSource}}
       {{#modal-message showModal=showThirdPartyDataModal}}
         <p>
-          In most cases you’ll need to ask permission to do this.
+          In most cases you’ll need to ask permission to do this. You’ll usually need to ask permission to get information from a third party. This generator doesn’t cover third parties, but you can
+          <a href="https://privacy.org.nz/contact-us/" target="_blank">contact us</a>
+          for help with creating a statement if this is the case.
+        </p>
+        <p>
           See
           <a href="https://privacy.org.nz/how-to-comply/getting-started/purpose/#collection" target="_blank">Fair Collection</a>
           or
           <a href="https://privacy.org.nz/the-privacy-act-and-codes/privacy-principles/source-of-personal-information-principle-two/" target="_blank">Privacy Principle 2</a>
-
-          for more.
+          for more information.
         </p>
       {{/modal-message}}
     {{/if}}
 
     {{#modal-message showModal=showNotReadyMessage}}
-      <p>You'll need to explain where you get your user information from.
+      <p>You'll need to explain where you get people's personal information from.
         <ul>
             {{#if model.statement.identityData}}<li>identity</li>{{/if}}
             {{#if model.statement.locationData}}<li>location</li>{{/if}}
@@ -70,7 +75,7 @@
   <div class="pure-u-1-4">
   {{#step-help buttonText="Why does this matter?"}}
       <p>
-        When collecting information it's almost always best to get it directly from the users themselves rather than third party sources. By knowing what information you have and what you're doing with it, users are far less likely to be surprised or upset.
+        When collecting information it's almost always best to get it directly from people themselves rather than third party sources, if you can. By knowing what information you have and what you're doing with it, people are far less likely to be surprised or upset.
       </p>
 
       <p>
