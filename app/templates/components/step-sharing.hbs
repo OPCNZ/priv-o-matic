@@ -2,7 +2,7 @@
 <div class="pure-g">
   <div class="pure-u-3-4">
     <p>
-      Besides our staff, we share this info with
+      Besides our staff, we share this information with
       <span class="text-input">{{input type="text" value=model.statement.thirdPartySharingNameOne placeholder="a 3rd party" size="13"}}</span>
       in order to
       <span class="text-input">{{input type="text" value=model.statement.thirdPartySharingPurpose placeholder="take actions connected to a purpose for collection" size="46"}}</span>.
@@ -11,7 +11,7 @@
     {{#each model.statement.sharingParties as |party|}}
       <div>
         <p>
-          We also share this info with
+          We also share this information with
           <span class="text-input">{{input type="text" value=party.nameOne placeholder="a 3rd party" size="13"}}</span>
           in order to
           <span class="text-input">{{input type="text" value=party.purpose placeholder="take actions connected to a purpose for collection" size="46"}}</span>.
@@ -30,11 +30,11 @@
   <div class="pure-u-1-4">
     {{#step-help buttonText="Is that a problem?"}}
             <p>
-              You need to have a valid reason to share information with outside parties, related to your purpose for collecting it. This doesn’t apply if you gathered the information from a public source, or you have asked the user’s permissions.
+              You need to have a valid reason to share information with outside parties, related to your purpose for collecting it. This doesn’t apply if you gathered the information from a public source, or you have asked the user’s permission.
             </p>
 
             <p>
-              When you’re dealing with cloud providers who are just storing or processing on your behalf, you don’t strictly have to include them. We say err on the side of transparency and tell your users, but if you’d like to talk it through,
+              When you’re dealing with cloud providers who are just storing or processing information on your behalf, you don’t strictly have to include them. We say err on the side of transparency and tell people, but if you’d like to talk it through,
               <a href="https://privacy.org.nz/contact-us/" target="_blank">contact us.</a>
             </p>
 
