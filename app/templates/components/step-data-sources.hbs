@@ -27,7 +27,11 @@
     {{#if model.statement.otherDataSource}}
       {{#modal-message showModal=showOtherDataModal}}
         <p>
-          In most cases you’ll need to get info directly from the user.
+          In most cases you’ll want to get info directly from the user. Unfortunately situations where information's collected from sources not listed here are too complex for this tool to handle. If this is the case you can
+          <a href="https://privacy.org.nz/contact-us/" target="_blank">contact us</a>
+          for help with creating a statement.
+        </p>
+        <p>
           See
           <a href="https://privacy.org.nz/how-to-comply/getting-started/purpose/#collection" target="_blank">Fair Collection</a>
           or
@@ -40,7 +44,11 @@
     {{#if model.statement.thirdPartyDataSource}}
       {{#modal-message showModal=showThirdPartyDataModal}}
         <p>
-          In most cases you’ll need to ask permission to do this.
+          You’ll usually need to ask for user permission to get information from a 3rd party. Unfortunately cases like this are a bit too complex for this tool to handle. You can
+          <a href="https://privacy.org.nz/contact-us/" target="_blank">contact us</a>
+          for help with creating a statement if this is the case.
+        <p>
+        </p>
           See
           <a href="https://privacy.org.nz/how-to-comply/getting-started/purpose/#collection" target="_blank">Fair Collection</a>
           or
