@@ -4,18 +4,18 @@
 <p>
 We collect personal information from you, including information about your:
 <ul>
-  {{#if model.identityData}}<li>identity</li>{{/if}}
-  {{#if model.addressData}}<li>address</li>{{/if}}
+  {{#if model.identityData}}<li>name</li>{{/if}}
+  {{#if model.addressData}}<li>contact information</li>{{/if}}
   {{#if model.locationData}}<li>location</li>{{/if}}
-  {{#if model.computerNetworkData}}<li>computer/network</li>{{/if}}
-  {{#if model.userBehaviourData}}<li>behaviour</li>{{/if}}
-  {{#if model.financialData}}<li>finances</li>{{/if}}
+  {{#if model.computerNetworkData}}<li>computer or network</li>{{/if}}
+  {{#if model.userBehaviourData}}<li>interactions with us</li>{{/if}}
+  {{#if model.financialData}}<li>billing or purchase information</li>{{/if}}
   {{#if model.otherDataInfo}}<li>{{model.otherDataInfo}}</li>{{/if}}
 </ul>
 </p>
 
 <p>
-  We collect this data because we need to:
+  We collect your personal information in order to:
   <ul>
   <li>{{model.collectionReason}}</li>
   {{#each model.extraReasons as |reason|}}
@@ -54,7 +54,7 @@ Providing some information is optional. If you choose not to enter {{model.optio
 
 {{#if model.secureMethodOne}}
   <p>
-  We keep user information safe by  {{model.secureMethodOne}}
+  We keep people's information safe by  {{model.secureMethodOne}}
   {{#if model.secureMethodTwo}}
     and {{model.secureMethodTwo}}
   {{/if}}.
