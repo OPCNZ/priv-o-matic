@@ -1,6 +1,6 @@
 
 
-<code>
+<code class="privacy-statement">
 <p>
 We collect personal information from you, including information about your:
 <ul>
@@ -62,16 +62,14 @@ Providing some information is optional. If you choose not to enter {{model.optio
 {{/if}}
 
 {{#if model.dataRetentionTime}}
-    We keep your information for
+    We keep your information
     {{model.dataRetentionTime}}
     at which point we securely destroy it by
     {{model.dataDestructionMethod}}.
 {{/if}}
 
 <p>
-You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong. If you’d like to ask for a copy of your information, or to have it corrected, please contact us at {{model.emailAddress}}
-  {{#if model.phoneNumber}}(or {{model.phoneNumber}}){{/if}}
-  {{#if model.postalAddress}}, or {{model.postalAddress}}){{/if}}.
+You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong. If you’d like to ask for a copy of your information, or to have it corrected, please contact us at {{model.emailAddress}}{{#if model.phoneNumber}}, or {{model.phoneNumber}}{{/if}}{{#if model.postalAddress}}, or {{model.postalAddress}}{{/if}}.
 </p>
 </code>
 

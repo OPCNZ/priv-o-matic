@@ -34,10 +34,15 @@
       </li>
       <li class="pure-u-1-2">
         {{input type="checkbox" id="otherData" checked=model.statement.otherData}}
-        <label for="otherData">Other</label>
-        {{#if model.statement.otherData}}
-          {{textarea value=model.statement.otherDataInfo cols="80" rows="6"}}
-        {{/if}}
+
+        {{#unless model.statement.otherData}}
+          <label for="otherData">Other</label>
+        {{else}}
+          <label for="otherData"></label>
+          <span class="text-input">
+            {{input type="text" value=model.statement.otherDataInfo}}
+          </span>
+        {{/unless}}
       </li>
     </ul>
 
@@ -49,16 +54,21 @@
     </ul>
 
     {{#modal-message showModal=model.statement.noData}}
-        <p>If you don't collect any data, you don’t need a privacy statement. No point in filling this out any further.</p>
+        <p>If you don't collect any data, you don’t need a privacy statement. There's no point in filling this out any further.</p>
     {{/modal-message}}
 
     {{#modal-message showModal=showNotReadyMessage}}
-        <p>If you don't collect any data, you don’t need a privacy statement. No point in filling this out any further.</p>
+        <p>If you don't collect any data, you don’t need a privacy statement. There's no point in filling this out any further.</p>
     {{/modal-message}}
 
     {{#modal-message showModal=model.statement.uniqueId}}
         <p>
           You need to be careful collecting these&mdash;you can't ask for unique identifiers unless your purpose for collection is linked to the reason the identifier was assigned.
+        </p>
+        <p>
+          Cases where unique identifiers are collected are a bit too complex for this tool to automatically create you a statement. If this is the case you can
+          <a href="https://privacy.org.nz/contact-us/" target="_blank">contact us</a>
+           for help with creating one.
         </p>
         <p>
           See

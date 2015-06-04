@@ -2,13 +2,14 @@
 <div class="pure-g">
   <div class="pure-u-3-4 modal-anchor">
     <p>
-      We collect this data because we need to <span class="text-input">{{input value=model.statement.collectionReason placeholder="do something that directly relates to our business"}}</span>
+      We collect this data because we need to <span class="text-input">{{input value=model.statement.collectionReason placeholder="do something that directly relates to our business" size="45"}}</span>
     </p>
 
     {{#each model.statement.extraReasons as |_ index|}}
       <p>
         also, we need to
-        <span class="text-input">{{array-item-input array=model.statement.extraReasons index=index placeholder="do another thing related to our business"}}</span>
+        <br />
+        <span class="text-input">{{array-item-input array=model.statement.extraReasons index=index placeholder="do another thing related to our business" size="37"}}</span>
       </p>
     {{/each}}
 
@@ -41,6 +42,9 @@
 
 
     {{#modal-message showModal=showUnstatedPurposeModal}}
+        <p>
+          Before this tool can generate you a statement, you will need to  list the reasons you collect personal information.
+        </p>
         <p>
           You're required to have a defined purpose for all the information you collect&mdash;if you can’t tell people why you need the information, it’s better to not collect it.
         </p>

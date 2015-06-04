@@ -52,7 +52,7 @@ input[type=radio]    + label:before  {
   display: inline-block;
   width: 30px;
   height: 30px;
-  border: 2px solid black;
+  border: 2px solid #333;
   margin-top:    1em;
 
   margin-right: 0.6em;
@@ -63,7 +63,8 @@ input[type=radio]    + label:before  {
 
 input[type="checkbox"]:checked + label:before,
 input[type="radio"]:checked    + label:before  {
-  background-color: rgb(239, 236, 232);
+  background-color: rgb(213, 212, 211);
+  border: 2px solid black;
   content: '';
 }
 
@@ -105,18 +106,27 @@ input[type="radio"]    + label  {
   border: 2px solid black;
   margin: 0.3em 0.2em 0 0.2em;
 
-  overflow: hidden;
+  position: relative;
 }
 
 .step-list .step-marker a {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
   color: transparent;
 }
 
 .step-list .step-marker.completed {
   background-color: black;
+}
+
+.step-list .step-marker .active:after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: -5px;
+  right: -5px;
+  top: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  border: 1px solid black;
 }
 
 
@@ -204,6 +214,19 @@ input[type="radio"]    + label  {
   margin-top: 25px;
 }
 
+/* ---- layer-2/modules/privacy-statement ---- */
+
+.privacy-statement {
+  display: block;
+  font-family: 'Courier New', monospace;
+  font-size: 0.7em;
+  line-height: 1.2em;
+  color: black;
+
+  border-left: 3px solid rgb(110, 110, 110);
+  padding: 0 0.7em;
+  margin: 2.3em 0;
+}
 
 /* ---- layer-2/modules/buttons ---- */
 
@@ -254,6 +277,7 @@ input[type="radio"]    + label  {
 
 .text-input input[type="text"] {
   border: none;
+  color: black;
 }
 
 .text-input {
@@ -315,6 +339,15 @@ input[type="radio"]    + label  {
   text-decoration: none;
   border: none;
 }
+
+
+/* ---- layer-2/modules/non-link-links ---- */
+
+.non-link {
+  text-decoration: none;
+  color: rgb(110, 110, 110);
+}
+
 
 /* ---- layer-2/modules/help-text-area ---- */
 
