@@ -19,7 +19,7 @@
           {{input type="checkbox" id="otherDataSource" checked=model.statement.otherDataSource}}
           <label for="otherDataSource">Other</label>
             {{#if model.statement.otherDataSource}}
-              {{textarea value=model.statement.otherDataSourceInfo cols="80" rows="6"}}
+              {{textarea value=model.statement.otherDataSourceInfo cols="40" rows="2"}}
             {{/if}}
         </li>
     </ul>
@@ -59,11 +59,12 @@
     {{#modal-message showModal=showNotReadyMessage}}
       <p>You'll need to explain where you get people's personal information from.
         <ul>
-            {{#if model.statement.identityData}}<li>identity</li>{{/if}}
+            {{#if model.statement.identityData}}<li>name</li>{{/if}}
             {{#if model.statement.locationData}}<li>location</li>{{/if}}
-            {{#if model.statement.computerNetworkData}}<li>computer/network</li>{{/if}}
-            {{#if model.statement.userBehaviourData}}<li>behaviour</li>{{/if}}
-            {{#if model.statement.financialData}}<li>finances</li>{{/if}}
+            {{#if model.statement.addressData}}<li>contact information</li>{{/if}}
+            {{#if model.statement.computerNetworkData}}<li>computer/network information</li>{{/if}}
+            {{#if model.statement.userBehaviourData}}<li>how people interact with you</li>{{/if}}
+            {{#if model.statement.financialData}}<li>billing information</li>{{/if}}
             {{#if model.statement.otherDataInfo}}<li>{{model.otherDataInfo}}</li>{{/if}}
         </ul>
       </p>
