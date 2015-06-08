@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'priv-o-matic',
     environment: environment,
-    baseURL: '/',
+    baseURL: '/priv-o-matic',
     locationType: 'hash',
     EmberENV: {
       FEATURES: {
