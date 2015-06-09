@@ -14,7 +14,7 @@ For more info on NZs privacy law requirements see the [Privacy Commissioner's Of
 
 Copyright (c) 2015 Office of the Privacy Commissioner
 
-The intention is to open source this tool, although at this point a license has yet been agreed and it is proprietary software.
+Priv-o-matic is available under the MIT Licence. see COPYING for more info.
 
 ## Prerequisites
 
