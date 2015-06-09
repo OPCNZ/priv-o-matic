@@ -1,6 +1,6 @@
 # Priv-o-matic 
 
-Priv-o-matic is a interactive Javascript tool for creating the privacy statements required by New Zealand law for small to medium enterprises (SMEs).
+Priv-o-matic is an interactive Javascript tool for creating the privacy statements required by New Zealand law for small to medium enterprises (SMEs).
 
 The goal is to improve the overall quality of online privacy statements seen in New Zealand, by making it easy for small business owners less familiar with privacy law to create statements.
 
@@ -14,7 +14,7 @@ For more info on NZs privacy law requirements see the [Privacy Commissioner's Of
 
 Copyright (c) 2015 Office of the Privacy Commissioner
 
-The intention is to open source this tool, although at this point a license has yet been agreed and it is proprietary software.
+Priv-o-matic is available under the MIT Licence. see COPYING for more info.
 
 ## Prerequisites
 
