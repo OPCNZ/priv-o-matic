@@ -1,6 +1,7 @@
 
 <div class="pure-g">
   <div class="pure-u-3-4">
+
     <p>
       Besides our staff, we share this information with
       <span class="text-input">{{input type="text" value=model.statement.thirdPartySharingNameOne placeholder="a 3rd party" size="13"}}</span>
@@ -21,6 +22,10 @@
 
     <p>
       <button {{action "addParty"}} class="pure-button button-black-on-white button-small">we have another reason for sharing</button>
+    </p>
+   
+    <p>
+      Don't share any of the information you collect? That's fine, move along to the next step.
     </p>
 
     {{yield}}
