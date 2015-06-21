@@ -5,7 +5,7 @@ import {
 
 moduleForComponent('step-why', {
   // Specify the other units that are required for this test
-  needs: ['component:radio-button']
+  needs: ['component:radio-button', 'component:modal-message', 'component:step-help']
 });
 
 test('it renders', function(assert) {
