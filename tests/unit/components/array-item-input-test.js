@@ -12,7 +12,11 @@ test('it renders', function(assert) {
   assert.expect(2);
 
   // Creates the component instance
-  var component = this.subject();
+  var component = this.subject({
+    index: 0,
+    array: ['testing array-item-input']
+    });
+
   assert.equal(component._state, 'preRender');
 
   // Renders the component to the page
