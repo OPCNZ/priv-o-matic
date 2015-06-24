@@ -5,7 +5,7 @@ import {
 
 moduleForModel('statement', {
   // Specify the other units that are required for this test.
-  needs: ['step']
+  needs: ['model:step']
 });
 
 test('it exists', function(assert) {
