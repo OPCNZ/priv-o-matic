@@ -5,7 +5,7 @@ import {
 
 moduleForComponent('step-legal-requirement', {
   // Specify the other units that are required for this test
-  // needs: ['component:foo', 'helper:bar']
+  needs: ['component:radio-button', 'component:modal-message']
 });
 
 test('it renders', function(assert) {

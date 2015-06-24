@@ -5,7 +5,7 @@ import {
 
 moduleForComponent('step-data-sources', {
   // Specify the other units that are required for this test
-  // needs: ['component:foo', 'helper:bar']
+  needs: ['component:modal-message', 'component:step-help']
 });
 
 test('it renders', function(assert) {
